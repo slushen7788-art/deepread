@@ -10,5 +10,7 @@ export const site = {
   author: "主理人", // TODO: 换成你的署名
   // AdSense 发布商 ID（用户 2026-10-20 提供；Vercel 环境变量 NEXT_PUBLIC_ADSENSE_CLIENT 可覆盖）
   adsClient: "ca-pub-2463152068592975",
+  // Google Analytics 衡量 ID（用户 2026-10-20 提供；环境变量 NEXT_PUBLIC_GA_ID 可覆盖）
+  gaId: "G-RV7HB0DDL2",
   contactEmail: "wtechtec@gmail.com",
 };

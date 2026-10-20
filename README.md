@@ -38,4 +38,4 @@ npm run build      # 构建前会自动运行 scripts/gen-index.mjs 刷新文章
 
 ## 广告位说明
 
-AdSense 发布商 ID 已内置在 `lib/site.ts`（ca-pub-2463152068592975），广告位会直接渲染真实广告；如需换发布商 ID，改 `lib/site.ts` 一处即可。AdSense 的 JS 只在根 `app/layout.tsx` 加载一次，文章里只写 `<AdSlot />`。
+AdSense 发布商 ID 已内置在 `lib/site.ts`（ca-pub-2463152068592975），广告位会直接渲染真实广告；如需换发布商 ID，改 `lib/site.ts` 一处即可。AdSense 的 JS 只在根 `app/layout.tsx` 加载一次，文章里只写 `<AdSlot />`。Google Analytics（G-RV7HB0DDL2）也已在同一处接入，ID 存在 `lib/site.ts`。

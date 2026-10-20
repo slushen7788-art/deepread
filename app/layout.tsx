@@ -13,6 +13,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const adsClient = process.env.NEXT_PUBLIC_ADSENSE_CLIENT || site.adsClient;
+  const gaId = process.env.NEXT_PUBLIC_GA_ID || site.gaId;
   return (
     <html lang="zh-CN">
       <body>
@@ -23,6 +24,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             crossOrigin="anonymous"
             strategy="afterInteractive"
           />
+        )}
+        {gaId && (
+          <>
+            <Script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+              strategy="afterInteractive"
+            />
+            <Script id="ga-init" strategy="afterInteractive">
+              {`window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${gaId}');`}
+            </Script>
+          </>
         )}
         <Header />
         <main className="page-wrap">{children}</main>

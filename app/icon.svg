@@ -1,5 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
   <rect width="100" height="100" rx="22" fill="#1C1A17"/>
-  <text x="45" y="67" font-size="50" font-weight="700" text-anchor="middle" fill="#FBFAF7" font-family="'PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans CJK SC',sans-serif">读</text>
-  <circle cx="79" cy="79" r="7" fill="#C2410C"/>
+  <g stroke="#C2410C" stroke-width="6" stroke-linecap="round" fill="none">
+    <path d="M36 22 L22 22 L22 36"/><path d="M64 22 L78 22 L78 36"/>
+    <path d="M36 78 L22 78 L22 64"/><path d="M64 78 L78 78 L78 64"/>
+  </g>
+  <g stroke="#FBFAF7" stroke-width="6" stroke-linecap="round">
+    <path d="M36 42 L64 42"/><path d="M36 56 L64 56"/>
+  </g>
+  <path d="M43 69 L57 69" stroke="#C2410C" stroke-width="6" stroke-linecap="round"/>
 </svg>
