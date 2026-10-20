@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import ArticleShell from "@/components/ArticleShell";
-import AdSlot from "@/components/AdSlot";
 import metaJson from "./meta.json";
 import type { ArticleMeta } from "@/lib/types";
 

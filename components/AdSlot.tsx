@@ -2,7 +2,8 @@
 import { useEffect } from "react";
 import { site } from "@/lib/site";
 
-// 广告位组件：正文里写 <AdSlot slot="xxxx" /> 即可
+// 【已停用】手动广告位组件：站长决定用 AdSense 自动广告自己找位置，全站不再手动放广告位。
+// 本文件保留备用，不要在页面里引用它。
 // 没配 NEXT_PUBLIC_ADSENSE_CLIENT 时显示占位框（预览版式用），配好后自动换成真实广告
 export default function AdSlot({
   slot,

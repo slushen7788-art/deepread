@@ -2,7 +2,6 @@ import Link from "next/link";
 import articlesJson from "@/lib/articles.generated.json";
 import type { ArticleMeta } from "@/lib/types";
 import SearchBox from "@/components/SearchBox";
-import AdSlot from "@/components/AdSlot";
 import { site } from "@/lib/site";
 
 const articles = articlesJson as ArticleMeta[];
@@ -39,7 +38,6 @@ export default function Home() {
         </Link>
       )}
 
-      <AdSlot slot="home-leaderboard" />
 
       <div className="sec-title">
         <span>最新精读</span>

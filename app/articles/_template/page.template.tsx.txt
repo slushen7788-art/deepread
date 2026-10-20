@@ -4,7 +4,6 @@
 // 3. 本文件改名为 page.tsx，正文替换成你的内容（结构照 fde-bubble/page.tsx）
 import type { Metadata } from "next";
 import ArticleShell from "@/components/ArticleShell";
-import AdSlot from "@/components/AdSlot";
 import metaJson from "./meta.json";
 import type { ArticleMeta } from "@/lib/types";
 
@@ -22,8 +21,7 @@ export default function Page() {
         <p>第一段正文……</p>
         <h2 id="sec-1">第一节标题</h2>
         <p>正文……</p>
-        {/* 正文约 1/3 处放一个文章内广告位 */}
-        <AdSlot slot="in-article" />
+        {/* 不要在正文里放广告位：AdSense 自动广告会自己找位置 */}
         <p>正文继续……</p>
       </div>
     </ArticleShell>

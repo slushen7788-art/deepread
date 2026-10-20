@@ -18,7 +18,7 @@ npm run build      # 构建前会自动运行 scripts/gen-index.mjs 刷新文章
    （结构参考现成的 `app/articles/fde-bubble/page.tsx`；小节标题记得带 `id="sec-N"` 并同步写进 meta.json 的 toc）
 4. `git add . && git commit && git push` —— 首页列表、分类页、搜索、sitemap、RSS 都靠构建时扫描 meta.json 自动收录，不用改任何清单文件
 
-正文里放广告位：`<AdSlot slot="in-article" />`（建议正文约 1/3 处一个、文末已有外壳自带的一个，不要在第一段之前放）。
+正文里不要放广告位：本站用 AdSense 自动广告，脚本加载后由 Google 自己找位置（记得在 AdSense 后台开启“自动广告”）。
 
 ## 上线（Vercel）
 
@@ -38,4 +38,4 @@ npm run build      # 构建前会自动运行 scripts/gen-index.mjs 刷新文章
 
 ## 广告位说明
 
-AdSense 发布商 ID 已内置在 `lib/site.ts`（ca-pub-2463152068592975），广告位会直接渲染真实广告；如需换发布商 ID，改 `lib/site.ts` 一处即可。AdSense 的 JS 只在根 `app/layout.tsx` 加载一次，文章里只写 `<AdSlot />`。Google Analytics（G-RV7HB0DDL2）也已在同一处接入，ID 存在 `lib/site.ts`。
+AdSense 发布商 ID 已内置在 `lib/site.ts`（ca-pub-2463152068592975）；全站不设手动广告位，靠自动广告投放；如需换发布商 ID，改 `lib/site.ts` 一处即可。AdSense 的 JS 只在根 `app/layout.tsx` 加载一次，文章里只写 `<AdSlot />`。Google Analytics（G-RV7HB0DDL2）也已在同一处接入，ID 存在 `lib/site.ts`。

@@ -2,7 +2,6 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import type { ArticleMeta } from "@/lib/types";
 import { site } from "@/lib/site";
-import AdSlot from "./AdSlot";
 
 // 文章页公共外壳：标题区、出处卡、目录、上下篇都在这里
 // 每篇文章的 page.tsx 只写 meta 和正文，版式改这里就全站生效
@@ -83,7 +82,6 @@ export default function ArticleShell({
           </div>
         </nav>
       )}
-      <AdSlot slot="article-bottom" />
     </article>
   );
 }
