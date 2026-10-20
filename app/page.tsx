@@ -60,26 +60,6 @@ export default function Home() {
         {rest.length === 0 && <p className="empty-note">更多精读正在路上。</p>}
       </div>
 
-      <div className="sec-title">
-        <span>这个站怎么读文章</span>
-      </div>
-      <div className="method">
-        <div className="step">
-          <i>01</i>
-          <b>先定主线</b>
-          <p>表面在说什么，实际在说什么，一句话说清。</p>
-        </div>
-        <div className="step">
-          <i>02</i>
-          <b>拆核心机制</b>
-          <p>回到一手材料，搞清它到底怎么运转。</p>
-        </div>
-        <div className="step">
-          <i>03</i>
-          <b>给第一手判断</b>
-          <p>用核实过的事实和真实经验来对照，不复述。</p>
-        </div>
-      </div>
     </div>
   );
 }
