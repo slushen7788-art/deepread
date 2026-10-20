@@ -15,6 +15,7 @@ export default function Page() {
     <ArticleShell
       meta={meta}
       prev={{ slug: "fde-bubble", title: "FDE 热潮暴露的核心问题：企业 Agent 卖的是软件收入，交付的却可能是人力" }}
+      next={{ slug: "browser-agent-runtime-judgment", title: "Browser Agent 的价值不在“会点网页”，而在把不确定的页面步骤交给运行时判断" }}
     >
       <div>
         <p>Agent Harness 真正解决的不是“怎样让模型更聪明”，而是“怎样把一次依赖模型临场表现的对话，变成一套能持续、能恢复、能验收的工作系统”。六个决定最终都指向同一件事：把控制权从模型手里拿出来，交给循环、文件、权限和独立验收机制。</p>

@@ -89,6 +89,8 @@ ins.ad-slot{border:none;padding:0;background:transparent}
 .article-body li{margin-bottom:6px}
 .article-body strong{color:var(--ink)}
 .article-body blockquote{border-left:3px solid #D8D2C4;padding:4px 0 4px 13px;color:var(--muted);margin:14px 0}
+.article-body pre{background:#FAF8F3;border:1px solid var(--line);border-radius:10px;padding:14px 18px;font-size:15px;line-height:1.7;overflow-x:auto;margin:0 0 14px;font-family:inherit;white-space:pre-wrap}
+.article-body code{background:#F2EFE8;padding:1px 5px;border-radius:4px;font-size:.92em}
 .key-point{background:var(--ink);color:var(--paper);border-radius:10px;padding:15px 17px;margin:14px 0}
 .prev-next{display:flex;gap:10px;margin-top:22px}
 .prev-next>div{flex:1;border:1px solid var(--line);border-radius:10px;background:#fff;padding:12px}

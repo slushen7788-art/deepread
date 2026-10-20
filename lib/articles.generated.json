@@ -1,5 +1,25 @@
 [
   {
+    "category": "Agent 工程",
+    "categorySlug": "agent-engineering",
+    "date": "2026-10-21",
+    "excerpt": "Browser Agent 真正解决的是：没有合适 API、网页结构又不稳定时，如何让程序根据当前页面决定下一步，而不是提前把每个点击和输入都写死。",
+    "featured": true,
+    "readingMinutes": 6,
+    "slug": "browser-agent-runtime-judgment",
+    "source": {
+      "outlet": "Browser Use 官方博客",
+      "title": "What Is a Browser Agent? How It Works and When to Use One",
+      "url": "https://browser-use.com/posts/browser-agents"
+    },
+    "tags": [
+      "Browser Agent",
+      "Browser Use",
+      "网页自动化"
+    ],
+    "title": "Browser Agent 的价值不在“会点网页”，而在把不确定的页面步骤交给运行时判断"
+  },
+  {
     "slug": "fde-bubble",
     "title": "FDE 热潮暴露的核心问题：企业 Agent 卖的是软件收入，交付的却可能是人力",
     "excerpt": "FDE 真正照亮的，恰好是自主 Agent 尚未跨过产品化门槛。最直接的检验只有一个：撤走驻场工程师，客户还能不能继续获得付费产品承诺的东西？",
@@ -54,6 +74,6 @@
       "outlet": "X 长文 · Yarchi（@undefinedKi）"
     },
     "readingMinutes": 7,
-    "featured": true
+    "featured": false
   }
 ]
