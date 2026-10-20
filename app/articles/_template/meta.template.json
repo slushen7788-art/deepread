@@ -1,0 +1,25 @@
+{
+  "slug": "your-article-slug",
+  "title": "文章标题",
+  "excerpt": "一两句摘要，会出现在首页卡片、搜索结果和文章页标题下方",
+  "date": "2026-01-01",
+  "category": "企业 AI",
+  "categorySlug": "enterprise-ai",
+  "tags": [
+    "标签1",
+    "标签2"
+  ],
+  "source": {
+    "title": "原文标题",
+    "url": "https://example.com/original",
+    "outlet": "原文媒体名"
+  },
+  "readingMinutes": 6,
+  "featured": false,
+  "toc": [
+    {
+      "id": "sec-1",
+      "label": "第一节标题"
+    }
+  ]
+}

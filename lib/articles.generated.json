@@ -1,0 +1,39 @@
+[
+  {
+    "slug": "fde-bubble",
+    "title": "FDE 热潮暴露的核心问题：企业 Agent 卖的是软件收入，交付的却可能是人力",
+    "excerpt": "FDE 真正照亮的，恰好是自主 Agent 尚未跨过产品化门槛。最直接的检验只有一个：撤走驻场工程师，客户还能不能继续获得付费产品承诺的东西？",
+    "date": "2026-10-20",
+    "category": "企业 AI",
+    "categorySlug": "enterprise-ai",
+    "tags": [
+      "Agent",
+      "FDE"
+    ],
+    "source": {
+      "title": "The FDE Bubble: Silicon Valley's Most Expensive Game Of Pretend",
+      "url": "https://news.crunchbase.com/venture/fde-bubble-enterprise-agentic-ai-gurtu-airrived/",
+      "outlet": "Crunchbase News"
+    },
+    "readingMinutes": 6,
+    "featured": true,
+    "toc": [
+      {
+        "id": "sec-1",
+        "label": "Agent 的自主性，通常卡在系统边界"
+      },
+      {
+        "id": "sec-2",
+        "label": "我更关心工具边界，而不是驻场人数"
+      },
+      {
+        "id": "sec-3",
+        "label": "ARR 不等于软件收入"
+      },
+      {
+        "id": "sec-4",
+        "label": "FDE 不一定是失败，也可以是产品侦察器"
+      }
+    ]
+  }
+]
