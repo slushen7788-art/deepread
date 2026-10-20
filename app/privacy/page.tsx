@@ -7,7 +7,7 @@ export default function Privacy() {
   return (
     <div className="static-page">
       <h1>隐私政策</h1>
-      <p>本页说明 {site.name}（{site.url}）如何处理访问者的信息。TODO：上线前请核对并补齐运营者信息。</p>
+      <p>本页说明本站如何处理访问者的信息。</p>
       <h2>我们收集什么</h2>
       <p>
         本站不提供账号注册，不主动收集姓名、电话等个人身份信息。服务器与统计服务可能记录 IP 地址、浏览器类型、
