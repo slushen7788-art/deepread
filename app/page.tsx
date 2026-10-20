@@ -2,6 +2,7 @@ import Link from "next/link";
 import articlesJson from "@/lib/articles.generated.json";
 import type { ArticleMeta } from "@/lib/types";
 import SearchBox from "@/components/SearchBox";
+import ArticleList from "@/components/ArticleList";
 import { site } from "@/lib/site";
 
 const articles = articlesJson as ArticleMeta[];
@@ -42,21 +43,11 @@ export default function Home() {
       <div className="sec-title">
         <span>最新精读</span>
       </div>
-      <div>
-        {rest.map((a) => (
-          <Link key={a.slug} href={`/articles/${a.slug}`} className="article-row">
-            <div className="row-thumb">{a.category.slice(0, 2)}</div>
-            <div>
-              <h3>{a.title}</h3>
-              <p>{a.excerpt}</p>
-              <div className="card-meta">
-                {a.date} · {a.category} · 原文：{a.source.outlet}
-              </div>
-            </div>
-          </Link>
-        ))}
-        {rest.length === 0 && <p className="empty-note">更多精读正在路上。</p>}
-      </div>
+      {rest.length > 0 ? (
+        <ArticleList articles={rest} />
+      ) : (
+        <p className="empty-note">更多精读正在路上。</p>
+      )}
 
     </div>
   );
