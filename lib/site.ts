@@ -5,8 +5,10 @@ export const site = {
   // 正式域名优先读环境变量 NEXT_PUBLIC_SITE_URL，没配时用占位
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://example.com",
   tagline: "每天精读一篇值得读的原文",
+  // 首页 <title>（SEO 用，带品类关键词；与站内展示的 tagline 分开）
+  homeTitle: "精读·DEEPREAD｜AI 解读与精读：看懂 AI 新模型、新概念与真假判断",
   description:
-    "每篇精读只做三件事：先定主线，再拆核心机制，最后给出核实过的第一手判断。",
+    "每天替你把 AI 领域的新东西看懂、判断真假，再用人话讲明白。AI 模型发布、智能体工程、前沿论文的可视化精读，配机制图拆解核心原理，给出核实过的第一手判断——能翻、能搜、能信。",
   author: "须鲸",
   // AdSense 发布商 ID（用户 2026-10-20 提供；Vercel 环境变量 NEXT_PUBLIC_ADSENSE_CLIENT 可覆盖）
   adsClient: "ca-pub-2463152068592975",

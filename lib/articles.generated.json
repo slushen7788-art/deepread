@@ -4,6 +4,7 @@
     "categorySlug": "agent-engineering",
     "date": "2026-10-21",
     "excerpt": "Browser Agent 真正解决的是：没有合适 API、网页结构又不稳定时，如何让程序根据当前页面决定下一步，而不是提前把每个点击和输入都写死。",
+    "seoDescription": "Browser Agent（浏览器智能体）是什么？它如何观察页面、选择动作、执行并检查结果？精读 Browser Use 官方长文，讲清它与脚本、API 的分工，以及生产环境真正的边界在哪。",
     "featured": true,
     "readingMinutes": 6,
     "slug": "browser-agent-runtime-judgment",
@@ -17,12 +18,15 @@
       "Browser Use",
       "网页自动化"
     ],
-    "title": "Browser Agent 的价值不在“会点网页”，而在把不确定的页面步骤交给运行时判断"
+    "title": "Browser Agent 的价值不在“会点网页”，而在把不确定的页面步骤交给运行时判断",
+    "seoTitle": "Browser Agent 是什么？浏览器智能体的工作原理与适用场景"
   },
   {
     "slug": "fde-bubble",
     "title": "FDE 热潮暴露的核心问题：企业 Agent 卖的是软件收入，交付的却可能是人力",
+    "seoTitle": "FDE 是什么？前沿部署工程师热潮背后的泡沫判断",
     "excerpt": "FDE 真正照亮的，恰好是自主 Agent 尚未跨过产品化门槛。最直接的检验只有一个：撤走驻场工程师，客户还能不能继续获得付费产品承诺的东西？",
+    "seoDescription": "FDE（前沿部署工程师，Forward Deployed Engineer）是什么？为什么 OpenAI、Anthropic 都在抢人？精读 Crunchbase 长文：FDE 热潮里，哪些是真需求、哪些是把人力包装成软件收入的泡沫。",
     "date": "2026-10-20",
     "category": "企业 AI",
     "categorySlug": "enterprise-ai",
@@ -59,7 +63,9 @@
   {
     "slug": "agent-harness-who-decides-done",
     "title": "Agent Harness 真正设计的，是谁有资格宣布任务完成",
+    "seoTitle": "什么是 Agent Harness：六个决定把模型变成能放手用的员工",
     "excerpt": "Agent Harness 真正解决的不是“怎样让模型更聪明”，而是“怎样把一次依赖模型临场表现的对话，变成一套能持续、能恢复、能验收的工作系统”。",
+    "seoDescription": "Agent Harness 是什么？它不是开发框架，而是包裹大模型的工程控制层。精读一篇 115 万浏览的长文，拆解让 AI 智能体能被放手使用的六个决定：停止规则、工具、记忆、恢复、权限与验收。",
     "date": "2026-10-20",
     "category": "Agent 工程",
     "categorySlug": "agent-engineering",

@@ -7,8 +7,28 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
-  title: { default: `${site.name}·${site.nameEn} | ${site.tagline}`, template: `%s | ${site.name}·${site.nameEn}` },
+  title: { default: site.homeTitle, template: `%s | ${site.name}·${site.nameEn}` },
   description: site.description,
+  openGraph: {
+    type: "website",
+    siteName: `${site.name}·${site.nameEn}`,
+    locale: "zh_CN",
+    title: site.homeTitle,
+    description: site.description,
+    url: site.url,
+  },
+  twitter: { card: "summary", title: site.homeTitle, description: site.description },
+};
+
+// 结构化数据：告诉搜索引擎这是一个什么站（文章页另有 Article 结构化数据，见 ArticleShell）
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: `${site.name}·${site.nameEn}`,
+  url: site.url,
+  description: site.description,
+  inLanguage: "zh-CN",
+  publisher: { "@type": "Organization", name: `${site.name}·${site.nameEn}` },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -17,6 +37,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="zh-CN">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
         {adsClient && (
           <Script
             async

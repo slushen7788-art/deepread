@@ -1,7 +1,9 @@
 {
   "slug": "fde-bubble",
   "title": "FDE 热潮暴露的核心问题：企业 Agent 卖的是软件收入，交付的却可能是人力",
+  "seoTitle": "FDE 是什么？前沿部署工程师热潮背后的泡沫判断",
   "excerpt": "FDE 真正照亮的，恰好是自主 Agent 尚未跨过产品化门槛。最直接的检验只有一个：撤走驻场工程师，客户还能不能继续获得付费产品承诺的东西？",
+  "seoDescription": "FDE（前沿部署工程师，Forward Deployed Engineer）是什么？为什么 OpenAI、Anthropic 都在抢人？精读 Crunchbase 长文：FDE 热潮里，哪些是真需求、哪些是把人力包装成软件收入的泡沫。",
   "date": "2026-10-20",
   "category": "企业 AI",
   "categorySlug": "enterprise-ai",

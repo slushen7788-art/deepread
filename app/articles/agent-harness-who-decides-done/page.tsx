@@ -5,9 +5,19 @@ import type { ArticleMeta } from "@/lib/types";
 
 const meta = metaJson as ArticleMeta;
 export const metadata: Metadata = {
-  title: meta.title,
-  description: meta.excerpt,
-  openGraph: { title: meta.title, description: meta.excerpt, type: "article" },
+  title: meta.seoTitle ?? meta.title,
+  description: meta.seoDescription ?? meta.excerpt,
+  openGraph: {
+    title: meta.seoTitle ?? meta.title,
+    description: meta.seoDescription ?? meta.excerpt,
+    type: "article",
+    publishedTime: meta.date,
+  },
+  twitter: {
+    card: "summary",
+    title: meta.seoTitle ?? meta.title,
+    description: meta.seoDescription ?? meta.excerpt,
+  },
 };
 
 export default function Page() {

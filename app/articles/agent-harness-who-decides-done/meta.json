@@ -1,7 +1,9 @@
 {
   "slug": "agent-harness-who-decides-done",
   "title": "Agent Harness 真正设计的，是谁有资格宣布任务完成",
+  "seoTitle": "什么是 Agent Harness：六个决定把模型变成能放手用的员工",
   "excerpt": "Agent Harness 真正解决的不是“怎样让模型更聪明”，而是“怎样把一次依赖模型临场表现的对话，变成一套能持续、能恢复、能验收的工作系统”。",
+  "seoDescription": "Agent Harness 是什么？它不是开发框架，而是包裹大模型的工程控制层。精读一篇 115 万浏览的长文，拆解让 AI 智能体能被放手使用的六个决定：停止规则、工具、记忆、恢复、权限与验收。",
   "date": "2026-10-20",
   "category": "Agent 工程",
   "categorySlug": "agent-engineering",

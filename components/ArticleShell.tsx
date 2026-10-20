@@ -16,8 +16,26 @@ export default function ArticleShell({
   next?: { slug: string; title: string };
   children: ReactNode;
 }) {
+  // 结构化数据：每篇文章向搜索引擎声明标题、日期、作者、出处分类
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: meta.title,
+    description: meta.seoDescription ?? meta.excerpt,
+    datePublished: meta.date,
+    author: { "@type": "Person", name: site.author },
+    publisher: { "@type": "Organization", name: `${site.name}·${site.nameEn}` },
+    mainEntityOfPage: `${site.url}/articles/${meta.slug}`,
+    inLanguage: "zh-CN",
+    articleSection: meta.category,
+    keywords: meta.tags.join("，"),
+  };
   return (
     <article className="article">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <div className="crumb">
         <Link href="/">首页</Link> /{" "}
         <Link href={`/category/${meta.categorySlug}`} className="crumb-cat">
