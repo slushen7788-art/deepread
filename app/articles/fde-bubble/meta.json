@@ -15,7 +15,7 @@
     "outlet": "Crunchbase News"
   },
   "readingMinutes": 6,
-  "featured": true,
+  "featured": false,
   "toc": [
     {
       "id": "sec-1",

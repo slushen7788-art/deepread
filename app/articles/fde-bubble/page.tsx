@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ArticleShell meta={meta}>
+    <ArticleShell meta={meta} next={{ slug: "agent-harness-who-decides-done", title: "Agent Harness 真正设计的，是谁有资格宣布任务完成" }}>
       <div>
         <p>Forward Deployed Engineer（FDE）正在成为企业 AI 的标准配置：模型公司派工程师进入客户现场，花几个月搭建工作流，再把包含大量人工服务的收入记成 ARR。</p>
         <p>这已经形成一种很稳定的商业模式：先卖平台，再补交付；先确认收入，再用下一轮融资扩大工程团队。融资故事也顺势切换成“agentic”“autonomous”和“operating leverage”。</p>

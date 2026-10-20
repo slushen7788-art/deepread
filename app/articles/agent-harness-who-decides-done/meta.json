@@ -1,0 +1,20 @@
+{
+  "slug": "agent-harness-who-decides-done",
+  "title": "Agent Harness 真正设计的，是谁有资格宣布任务完成",
+  "excerpt": "Agent Harness 真正解决的不是“怎样让模型更聪明”，而是“怎样把一次依赖模型临场表现的对话，变成一套能持续、能恢复、能验收的工作系统”。",
+  "date": "2026-10-20",
+  "category": "Agent 工程",
+  "categorySlug": "agent-engineering",
+  "tags": [
+    "Agent Harness",
+    "验收",
+    "上下文"
+  ],
+  "source": {
+    "title": "How to Design an Agent Harness: Six Decisions That Turn a Model Into a Worker You Can Leave Alone",
+    "url": "https://x.com/undefinedKi",
+    "outlet": "X 长文 · Yarchi（@undefinedKi）"
+  },
+  "readingMinutes": 7,
+  "featured": true
+}

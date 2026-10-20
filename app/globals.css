@@ -116,3 +116,7 @@ ins.ad-slot{border:none;padding:0;background:transparent}
   .header-inner .search{display:none}
   .featured-card h2{font-size:19px}
 }
+
+.article-figure{margin:20px 0}
+.article-figure img{width:100%;height:auto;border:1px solid var(--line);border-radius:12px;background:#fff}
+.article-figure figcaption{text-align:center;font-size:12.5px;color:var(--faint);margin-top:8px;line-height:1.6}
