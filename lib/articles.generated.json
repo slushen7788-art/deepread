@@ -25,9 +25,31 @@
     "category": "Agent 工程",
     "categorySlug": "agent-engineering",
     "date": "2026-10-21",
+    "excerpt": "生产级 Agent 记忆的难点不在存不下，而在谁来写、何时写、怎么读。MemCurrent 用情节记忆存原始轨迹、派生记忆存蒸馏后的文件化知识，再靠会话开始注入的索引和离线整理管线，让记忆成为独立于单次上下文和单个模型的知识运行时。",
+    "seoDescription": "MemCurrent 是什么？Databricks 为生产级 Agent 设计的持久记忆架构：情节记忆存原始轨迹、派生记忆存蒸馏知识、离线 dreaming 管线负责整理。精读其设计与评测：内部基准通过率从 22.3% 到 68.4% 的口径与边界在哪。",
+    "featured": true,
+    "readingMinutes": 7,
+    "slug": "memcurrent-persistent-memory",
+    "source": {
+      "outlet": "Databricks 官方博客",
+      "title": "MemCurrent: Designing Persistent Memory for Production Agents",
+      "url": "https://www.databricks.com/blog/memcurrent-designing-persistent-memory-production-agents"
+    },
+    "tags": [
+      "Agent 记忆",
+      "MemCurrent",
+      "Databricks"
+    ],
+    "title": "MemCurrent 真正解决的不是“记不住”，而是生产级 Agent 记忆该由谁写、何时写、怎么读",
+    "seoTitle": "MemCurrent 是什么？生产级 Agent 记忆系统的设计与评测"
+  },
+  {
+    "category": "Agent 工程",
+    "categorySlug": "agent-engineering",
+    "date": "2026-10-21",
     "excerpt": "长任务里让模型变差的，不是窗口太小，而是任务过程不断往窗口里堆东西。Deep Agents 的解法是把卸载、摘要、技能、子智能体和长期记忆做成挂在 agent 循环固定位置上的中间件，在内容进入上下文之前决定它的去留和粒度。",
     "seoDescription": "上下文工程（Context Engineering）是什么？长任务中 agent 的上下文为什么会腐烂（context rot）？精读 LangChain 官方长文：卸载、摘要、技能渐进式披露、子智能体隔离与长期记忆五种中间件，如何让上下文保持干净且可恢复。",
-    "featured": true,
+    "featured": false,
     "readingMinutes": 8,
     "slug": "context-engineering-deep-agents",
     "source": {

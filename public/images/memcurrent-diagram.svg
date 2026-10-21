@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 480" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <rect x="0" y="0" width="880" height="480" fill="#FBFAF7"/>
+  <!-- Agent 会话 -->
+  <rect x="250" y="24" width="380" height="64" rx="10" fill="#fff" stroke="#1C1A17" stroke-width="1.8"/>
+  <text x="440" y="52" text-anchor="middle" font-size="15" font-weight="700" fill="#1C1A17">Agent 会话</text>
+  <text x="440" y="74" text-anchor="middle" font-size="12" fill="#5C574C">会话开始时 plugin 先注入记忆索引：先知道自己知道什么</text>
+
+  <!-- 读 -->
+  <path d="M330 88 L 240 150" fill="none" stroke="#8A8474" stroke-width="1.6" marker-end="url(#arr)"/>
+  <text x="248" y="118" font-size="12" fill="#5C574C">search_memory 找</text>
+  <path d="M550 88 L 640 150" fill="none" stroke="#8A8474" stroke-width="1.6" marker-end="url(#arr)"/>
+  <text x="560" y="118" font-size="12" fill="#5C574C">fetch_memory 取全文</text>
+
+  <!-- 两种记忆 -->
+  <rect x="60" y="152" width="360" height="118" rx="10" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.5"/>
+  <text x="80" y="180" font-size="14" font-weight="700" fill="#C2410C">Episodic memory · 情节记忆</text>
+  <text x="80" y="204" font-size="12" fill="#1C1A17">原始会话轨迹，只追加、不改写</text>
+  <text x="80" y="226" font-size="12" fill="#5C574C">由 plugin 在会话进行时自动记录每一步</text>
+  <text x="80" y="248" font-size="12" fill="#5C574C">单独用只有 35.8%：存了原料，但 agent 常想不起来去翻</text>
+
+  <rect x="460" y="152" width="360" height="118" rx="10" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.5"/>
+  <text x="480" y="180" font-size="14" font-weight="700" fill="#C2410C">Derived memory · 派生记忆</text>
+  <text x="480" y="204" font-size="12" fill="#1C1A17">从轨迹里蒸馏出的学习，存成结构化文件</text>
+  <text x="480" y="226" font-size="12" fill="#5C574C">顶部一份自动生成的 memory.md 索引，说明每个文件装了什么</text>
+  <text x="480" y="248" font-size="12" fill="#5C574C">单独用 66.1%：大部分价值在这里，索引是关键</text>
+
+  <!-- 写入通道 -->
+  <rect x="60" y="300" width="360" height="86" rx="10" fill="#fff" stroke="#1C1A17" stroke-width="1.5"/>
+  <text x="80" y="326" font-size="13" font-weight="700" fill="#1C1A17">写入通道一：Agent 工具（在线）</text>
+  <text x="80" y="348" font-size="12" fill="#5C574C">add / update / delete_memory 处理显式请求</text>
+  <text x="80" y="368" font-size="12" fill="#5C574C">如“永远别把脚本写进 /tmp”——立即生效，单独用 53.9%</text>
+
+  <rect x="460" y="300" width="360" height="86" rx="10" fill="#fff" stroke="#1C1A17" stroke-width="1.5"/>
+  <text x="480" y="326" font-size="13" font-weight="700" fill="#1C1A17">写入通道二：Dreaming 管线（离线）</text>
+  <text x="480" y="348" font-size="12" fill="#5C574C">从新会话里蒸馏隐式学习，写回对应文件</text>
+  <text x="480" y="368" font-size="12" fill="#5C574C">还负责全库整理：拆大文件、合并重复、解决冲突，单独用 63.5%</text>
+
+  <path d="M640 300 L 640 272" fill="none" stroke="#8A8474" stroke-width="1.6" marker-end="url(#arr)"/>
+  <path d="M240 300 L 240 272" fill="none" stroke="#8A8474" stroke-width="1.6" marker-end="url(#arr)"/>
+  <path d="M460 343 L 422 343" fill="none" stroke="#8A8474" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#arr)"/>
+  <text x="441" y="334" text-anchor="middle" font-size="11" fill="#5C574C">原料</text>
+
+  <text x="440" y="424" text-anchor="middle" font-size="12" fill="#5C574C">三种接入形态全用：plugin 自动记录与注入 · tool 处理显式读写 · pipeline 离线整理</text>
+  <text x="440" y="448" text-anchor="middle" font-size="12" fill="#5C574C">内部基准（厂商自建自评）：无记忆 22.3% → MemCurrent 68.4%，gold 注入上限 78.6%</text>
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 z" fill="#8A8474"/>
+    </marker>
+  </defs>
+</svg>

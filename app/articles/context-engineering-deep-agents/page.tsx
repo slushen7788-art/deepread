@@ -25,6 +25,7 @@ export default function Page() {
     <ArticleShell
       meta={meta}
       prev={{ slug: "more-ambitious-with-models", title: "用模型时最值得偷懒的地方，不是提示词，而是任务本身" }}
+      next={{ slug: "memcurrent-persistent-memory", title: "MemCurrent 真正解决的不是“记不住”，而是生产级 Agent 记忆该由谁写、何时写、怎么读" }}
     >
       <div>
         <p>Deep Agents 解决的是一个反直觉问题：Agent 干活越久，积累的信息越多，模型反而可能做得越差。它没有继续扩大模型上下文窗口，而是在 Agent 循环的几个固定位置插入 middleware，提前拦截尖峰、压缩历史、按需加载知识、隔离噪声，并把跨会话记忆交给用户自己保存。</p>
