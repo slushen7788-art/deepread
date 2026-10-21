@@ -25,6 +25,7 @@ export default function Page() {
     <ArticleShell
       meta={meta}
       prev={{ slug: "memcurrent-persistent-memory", title: "MemCurrent 真正解决的不是“记不住”，而是生产级 Agent 记忆该由谁写、何时写、怎么读" }}
+      next={{ slug: "uber-autoclean-agentic-cleanup", title: "AutoClean 不是“让 AI 删代码”，而是把代码删除变成一条可验证的工程流水线" }}
     >
       <div>
         <p>Agents CLI 真正解决的不是“LangChain 用户也想用 Google 的部署和评测”，而是 Agent 开发工具链里一个更基础的结构性问题：框架越来越多样，但部署、评测、可观测和企业治理仍然需要一套统一入口。过去想让 ADK 之外的项目接入，通常只有三条路——分叉 CLI、在外面包一层脚本，或者整套重建。扩展系统把这三个选项替换成了一个更工程化的机制：允许组织直接覆盖命令、增加命令、规定命令的来源，同时保留版本锁定、冲突提示和可审计的安装记录。</p>

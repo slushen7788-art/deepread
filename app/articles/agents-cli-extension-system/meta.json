@@ -4,7 +4,7 @@
   "date": "2026-10-22",
   "excerpt": "Agents CLI 表面在用扩展系统支持 LangChain，实际解决的是 Agent 工具链如何摆脱单一框架绑定：24 条命令里只有 6 条真正与框架耦合，扩展用一份清单就能替换它们，其余部署、评测命令和服务契约原样复用，再用锁文件、覆盖标记和明确拒绝把可魔改的命令面管得可审计。",
   "seoDescription": "Agents CLI 是什么？Google 的 Agent 开发命令行加上扩展系统：24 条命令里只有 6 条与框架耦合，任何框架写一份 YAML 清单即可替换，LangChain、LangGraph、Deep Agents 都能接入同一套部署与评测。精读其锁文件、覆盖标记与明确拒绝的设计，以及开放止于框架层的边界。",
-  "featured": true,
+  "featured": false,
   "readingMinutes": 8,
   "slug": "agents-cli-extension-system",
   "source": {

@@ -91,6 +91,7 @@ ins.ad-slot{border:none;padding:0;background:transparent}
 .article-body p{margin-bottom:14px}
 .article-body h2{font-size:20px;color:var(--ink);margin:26px 0 12px;padding-left:10px;border-left:4px solid var(--accent);line-height:1.5}
 .article-body ul{margin:0 0 14px 20px}
+.article-body ol{margin:0 0 14px 22px}
 .article-body li{margin-bottom:6px}
 .article-body strong{color:var(--ink)}
 .article-body blockquote{border-left:3px solid #D8D2C4;padding:4px 0 4px 13px;color:var(--muted);margin:14px 0}
