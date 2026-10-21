@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <rect x="0" y="0" width="960" height="600" fill="#fbfaf8"/>
+  <text x="480" y="42" text-anchor="middle" font-size="21" font-weight="700" fill="#1a1a1a">Agents CLI 扩展系统：框架可替换，命令面不变</text>
+
+  <!-- 框架层 -->
+  <rect x="60" y="70" width="840" height="96" rx="10" fill="#eef4ff" stroke="#b9cdf2"/>
+  <text x="84" y="98" font-size="15" font-weight="700" fill="#20509e">框架层（各项目自己选）</text>
+  <g font-size="14.5" fill="#1f3a5f">
+    <rect x="84" y="110" width="150" height="38" rx="7" fill="#ffffff" stroke="#b9cdf2"/><text x="159" y="134" text-anchor="middle">ADK（默认）</text>
+    <rect x="250" y="110" width="150" height="38" rx="7" fill="#ffffff" stroke="#b9cdf2"/><text x="325" y="134" text-anchor="middle">LangChain</text>
+    <rect x="416" y="110" width="150" height="38" rx="7" fill="#ffffff" stroke="#b9cdf2"/><text x="491" y="134" text-anchor="middle">LangGraph</text>
+    <rect x="582" y="110" width="150" height="38" rx="7" fill="#ffffff" stroke="#b9cdf2"/><text x="657" y="134" text-anchor="middle">Deep Agents</text>
+    <rect x="748" y="110" width="128" height="38" rx="7" fill="#ffffff" stroke="#b9cdf2"/><text x="812" y="134" text-anchor="middle">内部框架</text>
+  </g>
+  <text x="480" y="192" text-anchor="middle" font-size="14" fill="#666">LangChain / LangGraph / Deep Agents 最终都编译成同一种图（CompiledStateGraph）</text>
+
+  <!-- 扩展层 -->
+  <rect x="60" y="212" width="840" height="150" rx="10" fill="#fff7ea" stroke="#ecd3a3"/>
+  <text x="84" y="240" font-size="15" font-weight="700" fill="#8a5a12">扩展系统（agents-cli-extension.yaml，走 Git 分发）</text>
+  <g font-size="14" fill="#4a3410">
+    <rect x="84" y="254" width="390" height="44" rx="7" fill="#ffffff" stroke="#ecd3a3"/>
+    <text x="100" y="281">override：替换 6 条耦合命令（run / playground / eval…）</text>
+    <rect x="490" y="254" width="386" height="44" rx="7" fill="#ffffff" stroke="#ecd3a3"/>
+    <text x="506" y="281">add：新增命令（如企业策略 sbom-report）</text>
+    <rect x="84" y="308" width="390" height="44" rx="7" fill="#ffffff" stroke="#ecd3a3"/>
+    <text x="100" y="335">锁文件把 Git 引用钉到 commit SHA，版本不漂移</text>
+    <rect x="490" y="308" width="386" height="44" rx="7" fill="#ffffff" stroke="#ecd3a3"/>
+    <text x="506" y="335">覆盖明示（警告行 / [↑] 标记）· 不支持的命令明确拒绝</text>
+  </g>
+
+  <!-- 命令面与契约 -->
+  <path d="M480 362 L480 388" stroke="#999" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="60" y="392" width="840" height="72" rx="10" fill="#f2f2f2" stroke="#d8d8d8"/>
+  <text x="84" y="420" font-size="15" font-weight="700" fill="#333">统一命令面（约 24 条命令，其余约 18 条框架无关、原样复用）</text>
+  <text x="84" y="446" font-size="14" fill="#555">create · scaffold · infra · deploy · eval grade/compare · publish · login —— 一套入口管全生命周期</text>
+
+  <path d="M480 464 L480 490" stroke="#999" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="60" y="494" width="840" height="72" rx="10" fill="#eefaf0" stroke="#bfe3c8"/>
+  <text x="84" y="522" font-size="15" font-weight="700" fill="#1e6b34">契约层 + Google Cloud（框架无关性真正成立的位置）</text>
+  <text x="84" y="548" font-size="14" fill="#2c4a33">FastAPI / A2A 契约 → Cloud Run / GKE / Agent Runtime 部署 · Google 评测与可观测（开放止于框架层）</text>
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6 z" fill="#999"/>
+    </marker>
+  </defs>
+</svg>

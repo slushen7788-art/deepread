@@ -25,6 +25,7 @@ export default function Page() {
     <ArticleShell
       meta={meta}
       prev={{ slug: "context-engineering-deep-agents", title: "Deep Agents 真正解决的不是“窗口不够大”，而是任务过程会污染上下文" }}
+      next={{ slug: "agents-cli-extension-system", title: "Agents CLI 的扩展系统，表面上是在支持 LangChain，实际上是在把 Agent 工具链从“框架绑定”改造成“命令面可替换”" }}
     >
       <div>
         <p>MemCurrent 的核心不是扩大上下文窗口，而是把 Agent 记忆做成一套分层存储、异步维护、按需读取的运行时系统：原始轨迹负责保留事实细节，蒸馏后的知识文件负责稳定复用，索引负责路由，Agent 工具和离线管线负责处理不同类型的写入。</p>

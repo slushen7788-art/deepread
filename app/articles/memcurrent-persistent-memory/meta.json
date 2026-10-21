@@ -4,7 +4,7 @@
   "date": "2026-10-21",
   "excerpt": "生产级 Agent 记忆的难点不在存不下，而在谁来写、何时写、怎么读。MemCurrent 用情节记忆存原始轨迹、派生记忆存蒸馏后的文件化知识，再靠会话开始注入的索引和离线整理管线，让记忆成为独立于单次上下文和单个模型的知识运行时。",
   "seoDescription": "MemCurrent 是什么？Databricks 为生产级 Agent 设计的持久记忆架构：情节记忆存原始轨迹、派生记忆存蒸馏知识、离线 dreaming 管线负责整理。精读其设计与评测：内部基准通过率从 22.3% 到 68.4% 的口径与边界在哪。",
-  "featured": true,
+  "featured": false,
   "readingMinutes": 7,
   "slug": "memcurrent-persistent-memory",
   "source": {
