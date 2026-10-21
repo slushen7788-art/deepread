@@ -4,7 +4,7 @@
   "date": "2026-10-21",
   "excerpt": "Browser Agent 真正解决的是：没有合适 API、网页结构又不稳定时，如何让程序根据当前页面决定下一步，而不是提前把每个点击和输入都写死。",
   "seoDescription": "Browser Agent（浏览器智能体）是什么？它如何观察页面、选择动作、执行并检查结果？精读 Browser Use 官方长文，讲清它与脚本、API 的分工，以及生产环境真正的边界在哪。",
-  "featured": true,
+  "featured": false,
   "readingMinutes": 6,
   "slug": "browser-agent-runtime-judgment",
   "source": {

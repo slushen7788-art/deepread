@@ -1,0 +1,22 @@
+{
+  "category": "AI 方法论",
+  "categorySlug": "ai-methodology",
+  "date": "2026-10-21",
+  "excerpt": "模型能力变强之后，限制人的往往是任务切得太小。把“野心”拆成速度、高度、深度、范围四种逐个讲清：任务每往上一级，都必须同步补齐数据、工具、权限与外部验收。",
+  "seoDescription": "为什么有人用 AI 做出惊人的事，多数人只拿来改邮件？Anthropic 工程师 Felix Rieseberg 把野心拆成速度、高度、深度、范围四种：关键不在提示词，而在任务怎么定义——目标、原始数据、专业方法、外部验收必须一起升级。",
+  "featured": true,
+  "readingMinutes": 6,
+  "slug": "more-ambitious-with-models",
+  "source": {
+    "outlet": "Felix Rieseberg 个人博客",
+    "title": "How to be more ambitious: A tutorial for humans with models",
+    "url": "https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/"
+  },
+  "tags": [
+    "任务设计",
+    "AI 使用方法",
+    "目标设定"
+  ],
+  "title": "用模型时最值得偷懒的地方，不是提示词，而是任务本身",
+  "seoTitle": "如何更充分地使用 AI：速度、高度、深度、范围四种野心"
+}

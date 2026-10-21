@@ -25,6 +25,7 @@ export default function Page() {
     <ArticleShell
       meta={meta}
       prev={{ slug: "agent-harness-who-decides-done", title: "Agent Harness 真正设计的，是谁有资格宣布任务完成" }}
+      next={{ slug: "more-ambitious-with-models", title: "用模型时最值得偷懒的地方，不是提示词，而是任务本身" }}
     >
       <div>
         <p>Browser Agent 真正解决的是：没有合适 API、网页结构又不稳定时，如何让程序根据当前页面决定下一步，而不是提前把每个点击和输入都写死。</p>

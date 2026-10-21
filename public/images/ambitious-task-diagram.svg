@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <rect x="0" y="0" width="880" height="430" fill="#FBFAF7"/>
+  <!-- 原任务 -->
+  <rect x="30" y="150" width="150" height="110" rx="10" fill="#fff" stroke="#1C1A17" stroke-width="1.6"/>
+  <text x="105" y="185" text-anchor="middle" font-size="15" font-weight="700" fill="#1C1A17">原任务</text>
+  <text x="105" y="210" text-anchor="middle" font-size="12" fill="#5C574C">交付一个产物</text>
+  <text x="105" y="230" text-anchor="middle" font-size="12" fill="#5C574C">如：填好模板的 deck</text>
+  <!-- 三个杠杆 -->
+  <rect x="250" y="30" width="240" height="86" rx="10" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.6"/>
+  <text x="370" y="58" text-anchor="middle" font-size="14" font-weight="700" fill="#C2410C">高度 Altitude</text>
+  <text x="370" y="80" text-anchor="middle" font-size="12" fill="#1C1A17">从交付任务 → 负责结果</text>
+  <text x="370" y="100" text-anchor="middle" font-size="12" fill="#5C574C">目标之上的目标是什么</text>
+  <rect x="250" y="162" width="240" height="86" rx="10" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.6"/>
+  <text x="370" y="190" text-anchor="middle" font-size="14" font-weight="700" fill="#C2410C">深度 Depth</text>
+  <text x="370" y="212" text-anchor="middle" font-size="12" fill="#1C1A17">用顶级专业的方法做</text>
+  <text x="370" y="232" text-anchor="middle" font-size="12" fill="#5C574C">原始数据 · 专业工具 · 找盲点</text>
+  <rect x="250" y="294" width="240" height="86" rx="10" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.6"/>
+  <text x="370" y="322" text-anchor="middle" font-size="14" font-weight="700" fill="#C2410C">广度 Range</text>
+  <text x="370" y="344" text-anchor="middle" font-size="12" fill="#1C1A17">引入其他领域的方法</text>
+  <text x="370" y="364" text-anchor="middle" font-size="12" fill="#5C574C">名词换成动词 · 组建跨界团队</text>
+  <!-- arrows 原任务->杠杆 -->
+  <path d="M180 175 C 210 160, 220 90, 248 76" fill="none" stroke="#8A8474" stroke-width="1.6" marker-end="url(#arr)"/>
+  <path d="M180 205 L 248 205" fill="none" stroke="#8A8474" stroke-width="1.6" marker-end="url(#arr)"/>
+  <path d="M180 235 C 210 250, 220 320, 248 336" fill="none" stroke="#8A8474" stroke-width="1.6" marker-end="url(#arr)"/>
+  <!-- 任务合同 -->
+  <rect x="560" y="95" width="290" height="220" rx="10" fill="#fff" stroke="#1C1A17" stroke-width="1.8"/>
+  <text x="705" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#1C1A17">重写后的任务合同</text>
+  <text x="585" y="162" font-size="13" fill="#1C1A17">目标：要负责的结果，而不是产物</text>
+  <text x="585" y="190" font-size="13" fill="#1C1A17">数据：未经加工的原始材料</text>
+  <text x="585" y="218" font-size="13" fill="#1C1A17">方法：该领域顶级专业的做法</text>
+  <text x="585" y="246" font-size="13" fill="#1C1A17">工具：电脑 · 软件 · 数据接入</text>
+  <text x="585" y="274" font-size="13" fill="#1C1A17">验收：外部 judge 给明确反馈</text>
+  <text x="585" y="302" font-size="13" fill="#1C1A17">边界：权限 · 日志 · 失败回退</text>
+  <!-- arrows 杠杆->合同 -->
+  <path d="M490 73 C 520 80, 530 130, 558 140" fill="none" stroke="#8A8474" stroke-width="1.6" marker-end="url(#arr)"/>
+  <path d="M490 205 L 558 205" fill="none" stroke="#8A8474" stroke-width="1.6" marker-end="url(#arr)"/>
+  <path d="M490 337 C 520 330, 530 280, 558 270" fill="none" stroke="#8A8474" stroke-width="1.6" marker-end="url(#arr)"/>
+  <!-- 护栏 -->
+  <rect x="250" y="398" width="600" height="0" fill="none"/>
+  <text x="440" y="418" text-anchor="middle" font-size="12" fill="#5C574C">护栏：高目标只在承诺、反馈与能力上限内有效（Locke &amp; Latham）——模型不自检、不自宣成功</text>
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 z" fill="#8A8474"/>
+    </marker>
+  </defs>
+</svg>
