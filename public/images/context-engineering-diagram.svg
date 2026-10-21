@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <rect x="0" y="0" width="880" height="470" fill="#FBFAF7"/>
+  <!-- Agent 循环 -->
+  <rect x="180" y="26" width="230" height="58" rx="10" fill="#fff" stroke="#1C1A17" stroke-width="1.8"/>
+  <text x="295" y="62" text-anchor="middle" font-size="15" font-weight="700" fill="#1C1A17">模型调用（判断下一步）</text>
+  <rect x="470" y="26" width="230" height="58" rx="10" fill="#fff" stroke="#1C1A17" stroke-width="1.8"/>
+  <text x="585" y="62" text-anchor="middle" font-size="15" font-weight="700" fill="#1C1A17">工具调用（接触外部世界）</text>
+  <path d="M410 55 L 468 55" fill="none" stroke="#8A8474" stroke-width="1.8" marker-end="url(#arr)"/>
+  <path d="M585 84 L 585 108 Q 585 122 571 122 L 309 122 Q 295 122 295 108 L 295 86" fill="none" stroke="#8A8474" stroke-width="1.8" marker-end="url(#arr)"/>
+  <text x="440" y="114" text-anchor="middle" font-size="12" fill="#5C574C">工具结果返回，再次进入上下文 —— 循环往复直到任务完成</text>
+
+  <!-- 中间件挂点 -->
+  <text x="40" y="160" font-size="13" font-weight="700" fill="#C2410C">Middleware 挂在循环的固定位置上，在内容进入上下文之前动手：</text>
+
+  <rect x="40" y="176" width="390" height="76" rx="10" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.5"/>
+  <text x="58" y="202" font-size="13" font-weight="700" fill="#1C1A17">工具结果返回时 · Offloading</text>
+  <text x="58" y="224" font-size="12" fill="#5C574C">结果超过约 2 万 token 就先落盘，模型只看预览和文件路径，需要时再读回</text>
+
+  <rect x="450" y="176" width="390" height="76" rx="10" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.5"/>
+  <text x="468" y="202" font-size="13" font-weight="700" fill="#1C1A17">每次模型调用前 · Summarization</text>
+  <text x="468" y="224" font-size="12" fill="#5C574C">用量到 85% 就把旧消息折叠成摘要，原件备份在会话文件里，可恢复</text>
+
+  <rect x="40" y="268" width="390" height="76" rx="10" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.5"/>
+  <text x="58" y="294" font-size="13" font-weight="700" fill="#1C1A17">每次模型调用前 · Skills + Long-term memory</text>
+  <text x="58" y="316" font-size="12" fill="#5C574C">技能只注入“菜单”（名称和说明），全文按需读取；记忆文件注入系统提示并持续更新</text>
+
+  <rect x="450" y="268" width="390" height="76" rx="10" fill="#FFF7ED" stroke="#C2410C" stroke-width="1.5"/>
+  <text x="468" y="294" font-size="13" font-weight="700" fill="#1C1A17">任务派发时 · Subagents</text>
+  <text x="468" y="316" font-size="12" fill="#5C574C">注定吵闹的活派给独立窗口的子 agent，主 agent 只收最终结论，连预览都不看</text>
+
+  <!-- 文件系统层 -->
+  <rect x="40" y="372" width="800" height="62" rx="10" fill="#fff" stroke="#1C1A17" stroke-width="1.5"/>
+  <text x="440" y="398" text-anchor="middle" font-size="13" font-weight="700" fill="#1C1A17">上下文之外的可恢复存储（文件系统）</text>
+  <text x="440" y="420" text-anchor="middle" font-size="12" fill="#5C574C">大结果落盘 /large_tool_results · 被摘要的旧消息备份 /conversation_history · 跨会话记忆就是一份 Markdown 文件，归用户所有</text>
+  <path d="M235 344 L 235 370" fill="none" stroke="#8A8474" stroke-width="1.6" marker-end="url(#arr)"/>
+  <path d="M645 344 L 645 370" fill="none" stroke="#8A8474" stroke-width="1.6" marker-end="url(#arr)"/>
+
+  <text x="440" y="458" text-anchor="middle" font-size="12" fill="#5C574C">核心思路：不是把窗口撑大，而是让每样东西以正确的粒度、在正确的时机进出窗口</text>
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 z" fill="#8A8474"/>
+    </marker>
+  </defs>
+</svg>

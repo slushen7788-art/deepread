@@ -25,6 +25,7 @@ export default function Page() {
     <ArticleShell
       meta={meta}
       prev={{ slug: "browser-agent-runtime-judgment", title: "Browser Agent 的价值不在“会点网页”，而在把不确定的页面步骤交给运行时判断" }}
+      next={{ slug: "context-engineering-deep-agents", title: "Deep Agents 真正解决的不是“窗口不够大”，而是任务过程会污染上下文" }}
     >
       <div>
         <p>模型能力提升之后，真正限制人的往往不是模型不会做什么，而是人把任务切得太小。</p>
