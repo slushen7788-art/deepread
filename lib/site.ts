@@ -2,8 +2,8 @@
 export const site = {
   name: "精读",
   nameEn: "DEEPREAD",
-  // 正式域名优先读环境变量 NEXT_PUBLIC_SITE_URL，没配时用占位
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://example.com",
+  // 正式域名优先读环境变量 NEXT_PUBLIC_SITE_URL，没配时用正式域名（用户 2026-10-21 告知）
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://best.xujingyichang.top",
   tagline: "每天精读一篇值得读的原文",
   // 首页 <title>（SEO 用，带品类关键词；与站内展示的 tagline 分开）
   homeTitle: "精读·DEEPREAD｜AI 解读与精读：看懂 AI 新模型、新概念与真假判断",
