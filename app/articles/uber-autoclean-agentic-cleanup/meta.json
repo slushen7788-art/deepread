@@ -4,7 +4,7 @@
   "date": "2026-10-22",
   "excerpt": "Uber 的 AutoClean 表面在用 AI 删除过期 feature flag，实际把技术债清理做成了一条可验证的流水线：agent 只做传播判断，布尔化简交给确定性引擎，修 CI 的 fixer 被限制文件范围，最后由 CodeCourt 把只删不加、行为不变等要求拆成独立属性逐条验收。",
   "seoDescription": "AutoClean 是什么？Uber 用 AI agent 清理过期 feature flag 的系统：agent 负责传播判断，PolyglotPiranha 做确定性布尔化简，受限 fixer 修 CI，CodeCourt 按只删不加、语义不变等属性逐条验收。精读其三阶段设计与自报数字（16,000+ 个 flag、100 万行代码）的口径与缺口。",
-  "featured": true,
+  "featured": false,
   "readingMinutes": 5,
   "slug": "uber-autoclean-agentic-cleanup",
   "source": {

@@ -1,0 +1,22 @@
+{
+  "category": "AI 方法论",
+  "categorySlug": "ai-methodology",
+  "date": "2026-10-22",
+  "excerpt": "Kiro 的《前沿工程》指南表面讲怎么用 agent 加速开发，实际给的是一条投入依赖链：先写清意图与 spec，再把代码库整理到 agent 每次会话都能直接上手，给它快速反馈回路和权限边界，最后靠评审与持续调优让系统越用越顺。工具换掉不会自动变快，缺的是链条中间的环节。",
+  "seoDescription": "前沿工程（Frontier Engineering）是什么？Kiro 的实践者指南主张：开发者不再直接写软件，而是搭建写软件的 agent 系统——意图与 spec、代码库就绪、反馈回路、权限边界、持续调优构成一条依赖链。精读十章内容与口径：哪些是扎实工程判断，哪些是无数据的厂商宣称。",
+  "featured": true,
+  "readingMinutes": 8,
+  "slug": "kiro-frontier-engineering",
+  "source": {
+    "outlet": "Kiro 官方指南",
+    "title": "Frontier engineering",
+    "url": "https://kiro.dev/topics/frontier-engineering/"
+  },
+  "tags": [
+    "前沿工程",
+    "Kiro",
+    "Spec 驱动开发"
+  ],
+  "title": "Kiro 的前沿工程指南真正把开发者改成了“软件系统的设计者”",
+  "seoTitle": "什么是前沿工程？Kiro 指南：从写代码到搭建写软件的 Agent 系统"
+}

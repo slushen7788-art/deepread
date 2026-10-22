@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <rect x="0" y="0" width="960" height="640" fill="#fbfaf8"/>
+  <text x="480" y="42" text-anchor="middle" font-size="21" font-weight="700" fill="#1a1a1a">前沿工程：十章是一条缺一环就不成立的依赖链</text>
+
+  <rect x="110" y="64" width="740" height="76" rx="10" fill="#eef4ff" stroke="#b9cdf2"/>
+  <text x="134" y="92" font-size="15" font-weight="700" fill="#20509e">输入 · 方向与意图</text>
+  <text x="134" y="118" font-size="14" fill="#1f3a5f">spec 写清需求 / 约束 / 验收标准；耐久决策（架构、API 契约）人来定，两种设计都成立就各做原型比证据</text>
+
+  <path d="M480 140 L480 162" stroke="#999" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="110" y="166" width="740" height="76" rx="10" fill="#eef4ff" stroke="#b9cdf2"/>
+  <text x="134" y="194" font-size="15" font-weight="700" fill="#20509e">上下文 · 代码库就绪</text>
+  <text x="134" y="220" font-size="14" fill="#1f3a5f">agent 每次会话都等于重新入职：README、架构文档、模块边界、steering 文件、skills 把隐性知识变成显性接口</text>
+
+  <path d="M480 242 L480 264" stroke="#999" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="110" y="268" width="740" height="76" rx="10" fill="#fff7ea" stroke="#ecd3a3"/>
+  <text x="134" y="296" font-size="15" font-weight="700" fill="#8a5a12">执行 · 反馈回路 + 权限边界</text>
+  <text x="134" y="322" font-size="14" fill="#4a3410">本地可跑的测试与 property-based tests 让 agent 自纠；最小权限与确定性护栏代替盯梢，只拦不可撤销的动作</text>
+
+  <path d="M480 344 L480 366" stroke="#999" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="110" y="370" width="740" height="76" rx="10" fill="#fff7ea" stroke="#ecd3a3"/>
+  <text x="134" y="398" font-size="15" font-weight="700" fill="#8a5a12">质量 · 评审与边界契约</text>
+  <text x="134" y="424" font-size="14" fill="#4a3410">AI reviewer 接手前几轮，人看架构与安全边界；代码可抛，但端到端 / 性质 / 负载三类边界测试是重写的契约</text>
+
+  <path d="M480 446 L480 468" stroke="#999" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="110" y="472" width="740" height="76" rx="10" fill="#eefaf0" stroke="#bfe3c8"/>
+  <text x="134" y="500" font-size="15" font-weight="700" fill="#1e6b34">复利 · 持续调优</text>
+  <text x="134" y="526" font-size="14" fill="#2c4a33">agent 每次犯错或打断，都回写成 steering 新规、skill、工具或权限调整——维护的不只是产品，是造产品的系统</text>
+
+  <text x="480" y="586" text-anchor="middle" font-size="13.5" fill="#888">效果口径提醒：「手写代码不到 1%」「阶跃式提升」为 Kiro 观察式宣称，无样本与数据；前几周更慢是明说的成本</text>
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6 z" fill="#999"/>
+    </marker>
+  </defs>
+</svg>

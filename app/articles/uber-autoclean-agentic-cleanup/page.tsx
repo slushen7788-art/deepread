@@ -25,6 +25,7 @@ export default function Page() {
     <ArticleShell
       meta={meta}
       prev={{ slug: "agents-cli-extension-system", title: "Agents CLI 的扩展系统，表面上是在支持 LangChain，实际上是在把 Agent 工具链从“框架绑定”改造成“命令面可替换”" }}
+      next={{ slug: "kiro-frontier-engineering", title: "Kiro 的前沿工程指南真正把开发者改成了“软件系统的设计者”" }}
     >
       <div>
         <p>AutoClean 真正解决的不是“AI 能不能找到并删除过期 feature flag”，而是能不能在大型代码库里持续完成这种删除，同时不改变程序行为、不误删测试、不把清理范围扩散到别的功能。</p>
