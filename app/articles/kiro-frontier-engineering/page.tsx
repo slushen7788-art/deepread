@@ -25,6 +25,7 @@ export default function Page() {
     <ArticleShell
       meta={meta}
       prev={{ slug: "uber-autoclean-agentic-cleanup", title: "AutoClean 不是“让 AI 删代码”，而是把代码删除变成一条可验证的工程流水线" }}
+      next={{ slug: "verifying-intent-not-code-review", title: "AI 写完代码以后，评审不该继续盯着 Diff，而要验证它有没有兑现意图" }}
     >
       <div>
         <p>Kiro 这份指南真正推动的改变，是把开发工作的重心从直接写代码，迁到设计一套能够持续产出、验证和改进软件的 agent 系统。</p>

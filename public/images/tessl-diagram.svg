@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <rect x="0" y="0" width="960" height="620" fill="#fbfaf8"/>
+  <text x="480" y="42" text-anchor="middle" font-size="21" font-weight="700" fill="#1a1a1a">从评审代码到验证意图：判断前移，规则下沉</text>
+
+  <rect x="110" y="64" width="740" height="80" rx="10" fill="#eef4ff" stroke="#b9cdf2"/>
+  <text x="134" y="92" font-size="15" font-weight="700" fill="#20509e">1 · 判断前移：先评审意图，再生成代码</text>
+  <text x="134" y="120" font-size="14" fill="#1f3a5f">验收标准、约束、边角情况在第一行代码出现之前定清楚——错误想法在这个阶段的修正成本几乎为零</text>
+
+  <path d="M480 144 L480 166" stroke="#999" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="110" y="170" width="740" height="80" rx="10" fill="#eef4ff" stroke="#b9cdf2"/>
+  <text x="134" y="198" font-size="15" font-weight="700" fill="#20509e">2 · 意图契约化：每条标准 = 确定性裁决 + 证据</text>
+  <text x="134" y="226" font-size="14" fill="#1f3a5f">评审看的是约五条裁决和截图、请求轨迹，不再对着 500 行 diff 反推这段代码本该做什么</text>
+
+  <path d="M480 250 L480 272" stroke="#999" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="110" y="276" width="740" height="80" rx="10" fill="#fff7ea" stroke="#ecd3a3"/>
+  <text x="134" y="304" font-size="15" font-weight="700" fill="#8a5a12">3 · 评论炼成不变量：标准从评审历史里挖，不从清单里抄</text>
+  <text x="134" y="332" font-size="14" fill="#4a3410">最近 1,000 条评审评论里重复最多的 20 条 → 机器对每次变更强制执行（金额用 Money 类型、禁直写 users 表、只用结构化日志）</text>
+
+  <path d="M480 356 L480 378" stroke="#999" stroke-width="2" marker-end="url(#arr)"/>
+  <rect x="110" y="382" width="740" height="80" rx="10" fill="#eefaf0" stroke="#bfe3c8"/>
+  <text x="134" y="410" font-size="15" font-weight="700" fill="#1e6b34">4 · 五步成形：Argue → Capture → Codify → Debate → Own</text>
+  <text x="134" y="438" font-size="14" fill="#2c4a33">先让 agent 互挑方案、再记录意图、把评论变规则、人的时间花在决策上、最后定清规则归谁维护与废止</text>
+
+  <rect x="110" y="486" width="740" height="46" rx="10" fill="#f2f2f2" stroke="#d8d8d8"/>
+  <text x="480" y="515" text-anchor="middle" font-size="14" fill="#333">结果：人只处理决策、失败与例外；机械正确性由验证层持续执行</text>
+
+  <text x="480" y="570" text-anchor="middle" font-size="13.5" fill="#888">证据状态：四倍 PR 量与「三个月过渡节奏」为作者自述；量化效果数据不在本文，作者留待会议演讲</text>
+
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0 0 L7 3 L0 6 z" fill="#999"/>
+    </marker>
+  </defs>
+</svg>
