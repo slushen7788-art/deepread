@@ -1,11 +1,33 @@
 [
   {
+    "category": "Agent 工程",
+    "categorySlug": "agent-engineering",
+    "date": "2026-10-25",
+    "excerpt": "Claude Code 团队每天要处理 agent 写出的海量代码，解法是把评审从一道关卡拆成一套分工：每一层只负责 catch 自己能 catch 的风险，人的注意力只投向机器定不了价的地方。分级只看改动不看作者，批准只对某一个 commit 有效，底下垫着快速回滚。",
+    "seoDescription": "Agent 写代码后评审怎么做？Anthropic 把评审从逐行阅读换成按风险分流的六层检查：PR 前验证、AI 评审、安全评审、常规检查、风险分级人批、合并队列与分阶段发布。精读这套体系的分工逻辑、可直接拿走的便宜做法，以及投票独立性和共享理解两个未解缺口。",
+    "featured": true,
+    "readingMinutes": 7,
+    "slug": "anthropic-code-review-layers",
+    "source": {
+      "outlet": "Anthropic 官方博客",
+      "title": "How the Claude Code team does code review",
+      "url": "https://claude.dev/blog/solving-code-review-at-anthropic/"
+    },
+    "tags": [
+      "代码评审",
+      "Agent 工程",
+      "Claude Code"
+    ],
+    "title": "Anthropic 的代码评审真正省下的，是\"谁该看什么\"这个决策",
+    "seoTitle": "Anthropic 代码评审怎么做？Agent 写代码时代的分层评审与风险分级"
+  },
+  {
     "category": "AI 方法论",
     "categorySlug": "ai-methodology",
     "date": "2026-10-22",
     "excerpt": "AI 生成代码把评审变成瓶颈，问题不在人手不够，在评审对象选错了：diff 只说改了什么，不说本该做什么。这套做法把判断前移到意图定义，把每条验收标准做成带证据的确定性裁决，再把团队反复写的评审评论炼成机器执行的不变量，人只处理决策与例外。",
     "seoDescription": "AI 代码评审的瓶颈怎么解？当 PR 量翻了几倍、代码几乎全由 AI 生成，逐行评审 diff 已经失效：把意图评审前置、每条验收标准配确定性裁决与证据、把高频评审评论写成机器执行的不变量。精读这套五步框架的做法、成立条件与证据缺口。",
-    "featured": true,
+    "featured": false,
     "readingMinutes": 4,
     "slug": "verifying-intent-not-code-review",
     "source": {

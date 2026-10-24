@@ -25,6 +25,7 @@ export default function Page() {
     <ArticleShell
       meta={meta}
       prev={{ slug: "kiro-frontier-engineering", title: "Kiro 的前沿工程指南真正把开发者改成了“软件系统的设计者”" }}
+      next={{ slug: "anthropic-code-review-layers", title: "Anthropic 的代码评审真正省下的，是“谁该看什么”这个决策" }}
     >
       <div>
         <p>AI 大规模生成代码后，真正卡住交付节奏的往往不是编码速度，而是评审。代码写得越快，Diff 越大，审查者需要从实现细节里反推需求，再判断这些细节是否符合预期。问题不只是人类不够用，而是评审对象选错了：Diff 只能说明代码改了什么，无法证明代码原本应该做什么。</p>

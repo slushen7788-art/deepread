@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 430" font-family="PingFang SC, Noto Sans SC, sans-serif">
+  <rect width="880" height="430" fill="#faf8f5"/>
+  <text x="440" y="34" text-anchor="middle" font-size="19" font-weight="700" fill="#222">评审从一道关卡，拆成一套按风险分流的检查</text>
+  <text x="440" y="58" text-anchor="middle" font-size="13" fill="#666">每一层只负责自己能 catch 的风险，人的注意力只投向机器定不了价的地方</text>
+
+  <!-- pipeline boxes -->
+  <g font-size="13">
+    <rect x="20" y="90" width="118" height="64" rx="10" fill="#fff" stroke="#e0a458" stroke-width="2"/>
+    <text x="79" y="116" text-anchor="middle" font-weight="700" fill="#222">PR 前验证</text>
+    <text x="79" y="137" text-anchor="middle" fill="#555">跑起来、拿输出</text>
+    <text x="79" y="153" text-anchor="middle" fill="#555">子 agent 重看 diff</text>
+
+    <rect x="166" y="90" width="118" height="64" rx="10" fill="#fff" stroke="#e0a458" stroke-width="2"/>
+    <text x="225" y="116" text-anchor="middle" font-weight="700" fill="#222">AI 评审</text>
+    <text x="225" y="137" text-anchor="middle" fill="#555">多 agent 找 bug</text>
+    <text x="225" y="153" text-anchor="middle" fill="#555">另一组投票才贴出</text>
+
+    <rect x="312" y="90" width="118" height="64" rx="10" fill="#fff" stroke="#e0a458" stroke-width="2"/>
+    <text x="371" y="116" text-anchor="middle" font-weight="700" fill="#222">安全评审</text>
+    <text x="371" y="137" text-anchor="middle" fill="#555">发现 open 就阻塞</text>
+    <text x="371" y="153" text-anchor="middle" fill="#555">修好自动清除</text>
+
+    <rect x="458" y="90" width="118" height="64" rx="10" fill="#fff" stroke="#e0a458" stroke-width="2"/>
+    <text x="517" y="116" text-anchor="middle" font-weight="700" fill="#222">常规检查</text>
+    <text x="517" y="137" text-anchor="middle" fill="#555">lint / 类型 / 测试</text>
+    <text x="517" y="153" text-anchor="middle" fill="#555">PR 模板写清撤销</text>
+
+    <rect x="604" y="90" width="118" height="64" rx="10" fill="#fff7ec" stroke="#c96a1e" stroke-width="2"/>
+    <text x="663" y="116" text-anchor="middle" font-weight="700" fill="#222">人批：按风险</text>
+    <text x="663" y="137" text-anchor="middle" fill="#555">低免 / 中一人 / 高两人</text>
+    <text x="663" y="153" text-anchor="middle" fill="#555">分级看改动不看作者</text>
+
+    <rect x="750" y="90" width="110" height="64" rx="10" fill="#fff" stroke="#e0a458" stroke-width="2"/>
+    <text x="805" y="116" text-anchor="middle" font-weight="700" fill="#222">合并与发布</text>
+    <text x="805" y="137" text-anchor="middle" fill="#555">合并队列重跑</text>
+    <text x="805" y="153" text-anchor="middle" fill="#555">flag / 分阶段</text>
+  </g>
+  <!-- arrows -->
+  <g stroke="#c96a1e" stroke-width="2" fill="none">
+    <path d="M138 122 H166"/><path d="M284 122 H312"/><path d="M430 122 H458"/>
+    <path d="M576 122 H604"/><path d="M722 122 H750"/>
+  </g>
+  <g fill="#c96a1e">
+    <path d="M160 117 l8 5 -8 5 z"/><path d="M306 117 l8 5 -8 5 z"/><path d="M452 117 l8 5 -8 5 z"/>
+    <path d="M598 117 l8 5 -8 5 z"/><path d="M744 117 l8 5 -8 5 z"/>
+  </g>
+
+  <!-- underlay: rollback -->
+  <rect x="20" y="180" width="840" height="52" rx="10" fill="#f3ede4"/>
+  <text x="440" y="202" text-anchor="middle" font-size="13" fill="#555">垫在所有层底下：快速发现、快速回滚 —— flag 不用部署就能关，事故复盘问“哪一层本该 catch”</text>
+  <text x="440" y="221" text-anchor="middle" font-size="13" fill="#b00">缺口自承：还没有熔断器（指标恶化时自动收紧审批）</text>
+
+  <!-- improvement loop -->
+  <rect x="20" y="252" width="412" height="76" rx="10" fill="#fff" stroke="#7a9cc4" stroke-width="1.5"/>
+  <text x="226" y="276" text-anchor="middle" font-size="14" font-weight="700" fill="#222">评审员改进循环</text>
+  <text x="226" y="298" text-anchor="middle" font-size="13" fill="#555">事故与 revert → eval 集，每天重跑、改动重打分</text>
+  <text x="226" y="317" text-anchor="middle" font-size="13" fill="#555">噪音看人对评论的反应；优先级：先抓真 bug，再减轮数</text>
+
+  <rect x="448" y="252" width="412" height="76" rx="10" fill="#fff" stroke="#7a9cc4" stroke-width="1.5"/>
+  <text x="654" y="276" text-anchor="middle" font-size="14" font-weight="700" fill="#222">收敛机制</text>
+  <text x="654" y="298" text-anchor="middle" font-size="13" fill="#555">三轮封顶，只重审新 diff，按 bug 类别 flag，不重复贴</text>
+  <text x="654" y="317" text-anchor="middle" font-size="13" fill="#555">夜间 agent 扫存量代码，旧 bug 冒头前先 catch</text>
+
+  <!-- guardrail -->
+  <rect x="20" y="348" width="840" height="52" rx="10" fill="#eef3ee"/>
+  <text x="440" y="370" text-anchor="middle" font-size="13" fill="#444">护栏指标：人的时间（批准数中位数 / 95 分位、评论数、等待时长）—— revert 与事故率一抬头，省下的时间就是从评审挪到了救火</text>
+  <text x="440" y="389" text-anchor="middle" font-size="13" fill="#444">人留下的位置：决定做不做、审高风险代码、审定模式的架构、读证据、为结果负责</text>
+</svg>
