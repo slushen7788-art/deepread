@@ -1,0 +1,22 @@
+{
+  "category": "Agent 工程",
+  "categorySlug": "agent-engineering",
+  "date": "2026-10-26",
+  "excerpt": "ByteByteGo 这期 RAG 部分很短，短到只有两张流程说明：RAG 是用户提问、系统取相关信息、塞进提示词、模型生成答案；Agentic RAG 是 Agent 选工具、查多源、检查证据够不够、不够就换查法、够了再答。分界不在查几次，在\"证据够不够\"由谁、在什么时候判。",
+  "seoDescription": "RAG 和 Agentic RAG 到底差在哪？一次检索定死上下文的质量上限，Agentic 把\"证据够不够\"的判断移进循环、由模型自己反复做。精读这张流程图背后的判断权转移、自判自答的确认风险、成本与停止条件，以及最小可用的四件套设计。",
+  "featured": true,
+  "readingMinutes": 3,
+  "slug": "rag-vs-agentic-rag",
+  "source": {
+    "outlet": "ByteByteGo 通讯",
+    "title": "EP230: RAG vs Agentic RAG",
+    "url": "https://blog.bytebytego.com/p/ep230-rag-vs-agentic-rag"
+  },
+  "tags": [
+    "RAG",
+    "Agentic RAG",
+    "Agent 工程"
+  ],
+  "title": "RAG 与 Agentic RAG 的分界不在检索次数，在\"证据够不够\"由谁说了算",
+  "seoTitle": "RAG 与 Agentic RAG 有什么区别？从一次检索到循环查证"
+}

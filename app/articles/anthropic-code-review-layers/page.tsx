@@ -25,6 +25,7 @@ export default function Page() {
     <ArticleShell
       meta={meta}
       prev={{ slug: "verifying-intent-not-code-review", title: "AI 写完代码以后，评审不该继续盯着 Diff，而要验证它有没有兑现意图" }}
+      next={{ slug: "rag-vs-agentic-rag", title: "RAG 与 Agentic RAG 的分界不在检索次数，在\"证据够不够\"由谁说了算" }}
     >
       <div>
         <p>Claude Code 团队每天要处理 agent 写出的海量代码，解法是把评审从一道关卡拆成一套分工：每一层只负责 catch 自己能 catch 的风险，人的注意力只投向机器定不了价的地方。按团队自己的说法，单体仓库每天落地的改动从 5 月的约 2500 个涨到了 9 月的 3 万多个，Claude Code 仓库 6 月到 9 月合并的 PR 翻了一倍多，需要 revert 的比例反而下降了 40% 以上。这些数字都是团队自报，没有第三方验证，读的时候先把它们当成这套体系在自己身上跑出来的结果，放哪都灵则需要另外验证。</p>

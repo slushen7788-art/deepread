@@ -4,7 +4,7 @@
   "date": "2026-10-25",
   "excerpt": "Claude Code 团队每天要处理 agent 写出的海量代码，解法是把评审从一道关卡拆成一套分工：每一层只负责 catch 自己能 catch 的风险，人的注意力只投向机器定不了价的地方。分级只看改动不看作者，批准只对某一个 commit 有效，底下垫着快速回滚。",
   "seoDescription": "Agent 写代码后评审怎么做？Anthropic 把评审从逐行阅读换成按风险分流的六层检查：PR 前验证、AI 评审、安全评审、常规检查、风险分级人批、合并队列与分阶段发布。精读这套体系的分工逻辑、可直接拿走的便宜做法，以及投票独立性和共享理解两个未解缺口。",
-  "featured": true,
+  "featured": false,
   "readingMinutes": 7,
   "slug": "anthropic-code-review-layers",
   "source": {

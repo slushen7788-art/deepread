@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 400" font-family="PingFang SC, Noto Sans SC, sans-serif">
+  <rect width="880" height="400" fill="#faf8f5"/>
+  <text x="440" y="34" text-anchor="middle" font-size="19" font-weight="700" fill="#222">分界不在检索次数，在“证据够不够”由谁说了算</text>
+  <text x="440" y="58" text-anchor="middle" font-size="13" fill="#666">RAG：判断不存在，检索是生成前定死的前置步骤；Agentic RAG：判断进了循环</text>
+
+  <g font-size="13">
+    <rect x="20" y="90" width="400" height="72" rx="10" fill="#fff" stroke="#e0a458" stroke-width="2"/>
+    <text x="220" y="116" text-anchor="middle" font-weight="700" fill="#222">RAG：一次检索，定死上下文</text>
+    <text x="220" y="137" text-anchor="middle" fill="#555">提问 → 检索 → 信息进提示词 → 生成答案</text>
+    <text x="220" y="153" text-anchor="middle" fill="#555">瓶颈：第一次查询本身可能就是错的</text>
+
+    <rect x="460" y="90" width="400" height="72" rx="10" fill="#fff7ec" stroke="#c96a1e" stroke-width="2"/>
+    <text x="660" y="116" text-anchor="middle" font-weight="700" fill="#222">Agentic RAG：循环里反复判断</text>
+    <text x="660" y="137" text-anchor="middle" fill="#555">选工具 → 查 → 证据够不够 → 换查法或换工具 → 够了再答</text>
+    <text x="660" y="153" text-anchor="middle" fill="#555">每一步都藏着没画出来的决定</text>
+  </g>
+
+  <rect x="20" y="188" width="840" height="76" rx="10" fill="#fdf0e0"/>
+  <text x="440" y="212" text-anchor="middle" font-size="14" font-weight="700" fill="#b00">最难的是“够不够”由谁来判：判的和答的是同一个模型，自己给自己打分</text>
+  <text x="440" y="232" text-anchor="middle" font-size="13" fill="#444">对照什么标准？子问题清单，还是模型自己的感觉？什么时候停？证据齐了，还是轮数和预算到了？</text>
+  <text x="440" y="252" text-anchor="middle" font-size="13" fill="#444">循环没有修好检索本身，只是给了检索更多次机会；知识库里没有答案，循环只会把“没有”查得更贵</text>
+
+  <rect x="20" y="284" width="412" height="76" rx="10" fill="#fff" stroke="#7a9cc4" stroke-width="1.5"/>
+  <text x="226" y="308" text-anchor="middle" font-size="14" font-weight="700" fill="#222">最小可用的四件事</text>
+  <text x="226" y="330" text-anchor="middle" font-size="13" fill="#555">“够不够”写成清单；轮数和预算双封顶</text>
+  <text x="226" y="349" text-anchor="middle" font-size="13" fill="#555">每轮查询、工具、证据记下来；高风险答案独立核查</text>
+
+  <rect x="448" y="284" width="412" height="76" rx="10" fill="#fff" stroke="#7a9cc4" stroke-width="1.5"/>
+  <text x="654" y="308" text-anchor="middle" font-size="14" font-weight="700" fill="#222">现成的诊断信号</text>
+  <text x="654" y="330" text-anchor="middle" font-size="13" fill="#555">绝大多数第一轮就停：套了循环壳的 RAG，白付开销</text>
+  <text x="654" y="349" text-anchor="middle" font-size="13" fill="#555">经常撞轮数上限：标准或工具箱本身有问题</text>
+</svg>
