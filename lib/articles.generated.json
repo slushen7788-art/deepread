@@ -5,7 +5,7 @@
     "date": "2026-10-27",
     "excerpt": "一个 Agent 接到任务后，需要等待几小时、几天，甚至跨越服务器重启继续执行，问题就从模型能力转向了系统设计。《Build Long-Running Agents》围绕 Google ADK 的长时运行工作流，拆出了六层架构：Trigger、Runner、State、Resumable Workflow、Human Gate 和 Guards，分别负责唤醒、执行、记忆、恢复、授权和安全检查。",
     "seoDescription": "长时运行 Agent 怎么做？六层架构拆开看：触发器唤醒、Runner 执行、状态持久化、可恢复工作流、人工关卡与防护如何配合，演唱会抢票的例子讲清恢复、授权与幂等。",
-    "featured": true,
+    "featured": false,
     "readingMinutes": 7,
     "slug": "long-running-agents-6-layers",
     "source": {
@@ -20,6 +20,28 @@
     ],
     "title": "长时运行 Agent 的六层架构：让模型等待，让系统负责执行",
     "seoTitle": "长时运行 Agent 怎么做？六层架构让模型等待、系统负责执行"
+  },
+  {
+    "category": "Agent 工程",
+    "categorySlug": "agent-engineering",
+    "date": "2026-10-27",
+    "excerpt": "一个 Agent 执行任务时，通常需要反复向模型提交上下文：系统指令、工具定义、用户任务、历史对话、工具调用记录，以及工具返回的结果。任务越长，历史越多；如果每一轮都重新处理全部输入，计算开销也会随之累积。",
+    "seoDescription": "Agent 每轮重读全部历史，成本按轮次累积。Prompt Caching 的解法是把上下文按稳定程度分层：稳定前缀、任务状态、临时输入，配合显式与隐式断点、缓存键与预热，让重复输入只算一次。",
+    "featured": true,
+    "readingMinutes": 10,
+    "slug": "bedrock-prompt-caching",
+    "source": {
+      "outlet": "AWS Machine Learning Blog",
+      "title": "Groundhog Day for AI agents: Prompt caching patterns for using OpenAI models on Amazon Bedrock",
+      "url": "https://aws.amazon.com/cn/blogs/machine-learning/groundhog-day-for-ai-agents-prompt-caching-patterns-for-using-openai-models-on-amazon-bedrock/"
+    },
+    "tags": [
+      "Prompt Caching",
+      "Agent 工程",
+      "Amazon Bedrock"
+    ],
+    "title": "Agent 的 Prompt Caching：真正该优化的是上下文的重复读取",
+    "seoTitle": "Prompt Caching 怎么省 token？先把 Agent 上下文按稳定程度分层"
   },
   {
     "category": "Agent 工程",

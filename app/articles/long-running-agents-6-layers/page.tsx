@@ -25,6 +25,7 @@ export default function Page() {
     <ArticleShell
       meta={meta}
       prev={{ slug: "rag-vs-agentic-rag", title: "RAG 与 Agentic RAG 的分界不在检索次数，在\"证据够不够\"由谁说了算" }}
+      next={{ slug: "bedrock-prompt-caching", title: "Agent 的 Prompt Caching：真正该优化的是上下文的重复读取" }}
     >
       <div>
         <p>一个 Agent 接到任务后，需要等待几小时、几天，甚至跨越服务器重启继续执行，问题就从模型能力转向了系统设计。《Build Long-Running Agents》围绕 Google ADK 的长时运行工作流，拆出了六层架构：Trigger、Runner、State、Resumable Workflow、Human Gate 和 Guards，分别负责唤醒、执行、记忆、恢复、授权和安全检查。</p>

@@ -4,7 +4,7 @@
   "date": "2026-10-27",
   "excerpt": "一个 Agent 接到任务后，需要等待几小时、几天，甚至跨越服务器重启继续执行，问题就从模型能力转向了系统设计。《Build Long-Running Agents》围绕 Google ADK 的长时运行工作流，拆出了六层架构：Trigger、Runner、State、Resumable Workflow、Human Gate 和 Guards，分别负责唤醒、执行、记忆、恢复、授权和安全检查。",
   "seoDescription": "长时运行 Agent 怎么做？六层架构拆开看：触发器唤醒、Runner 执行、状态持久化、可恢复工作流、人工关卡与防护如何配合，演唱会抢票的例子讲清恢复、授权与幂等。",
-  "featured": true,
+  "featured": false,
   "readingMinutes": 7,
   "slug": "long-running-agents-6-layers",
   "source": {
