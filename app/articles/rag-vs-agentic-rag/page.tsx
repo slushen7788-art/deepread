@@ -25,6 +25,7 @@ export default function Page() {
     <ArticleShell
       meta={meta}
       prev={{ slug: "anthropic-code-review-layers", title: "Anthropic 的代码评审真正省下的，是“谁该看什么”这个决策" }}
+      next={{ slug: "long-running-agents-6-layers", title: "长时运行 Agent 的六层架构：让模型等待，让系统负责执行" }}
     >
       <div>
         <p>这期 ByteByteGo 的 RAG 部分很短，短到只有两张流程说明：RAG 是用户提问、系统去知识库取相关信息、把信息塞进提示词、模型据此生成答案；Agentic RAG 是 Agent 选工具、查文档、API、数据库或者网络、检查证据够不够、不够就换查法或者换工具、够了再生成答案。篇幅短，判断反而好下：两张图的差别不在"查几次"，而在"证据够不够"这个判断由谁、在什么时候做。RAG 里这个判断不存在，检索是一次性的前置步骤，查什么、查多少在生成之前就定死了；Agentic RAG 里这个判断进了循环，模型自己一边查一边判，查到它认为够了为止。分界不在次数，在判断权的位置。</p>
