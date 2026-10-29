@@ -4,7 +4,7 @@
   "date": "2026-10-27",
   "excerpt": "一个 Agent 执行任务时，通常需要反复向模型提交上下文：系统指令、工具定义、用户任务、历史对话、工具调用记录，以及工具返回的结果。任务越长，历史越多；如果每一轮都重新处理全部输入，计算开销也会随之累积。",
   "seoDescription": "Agent 每轮重读全部历史，成本按轮次累积。Prompt Caching 的解法是把上下文按稳定程度分层：稳定前缀、任务状态、临时输入，配合显式与隐式断点、缓存键与预热，让重复输入只算一次。",
-  "featured": true,
+  "featured": false,
   "readingMinutes": 10,
   "slug": "bedrock-prompt-caching",
   "source": {

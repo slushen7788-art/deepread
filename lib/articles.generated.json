@@ -2,6 +2,28 @@
   {
     "category": "Agent 工程",
     "categorySlug": "agent-engineering",
+    "date": "2026-10-29",
+    "excerpt": "我认为，这两份材料真正值得借鉴的地方，是它们把 Agent 架构从“如何拆分职责”转向了一个更可验证的问题：独立的上下文、模型调用和执行边界，究竟为任务质量带来了多少实际收益？",
+    "seoDescription": "Anthropic 的折叠子 Agent 方案与 single-agent-loop-kit 给出的思路：从端到端评估开始，找出经常一起运行的 Agent，逐个将其转为 Skills 和 Tools，再通过重复评估决定是否保留独立边界。",
+    "featured": true,
+    "readingMinutes": 12,
+    "slug": "dont-rush-to-split-agents",
+    "source": {
+      "outlet": "GitHub",
+      "title": "anthropics/single-agent-loop-kit",
+      "url": "https://github.com/anthropics/single-agent-loop-kit"
+    },
+    "tags": [
+      "Agent 架构",
+      "Subagent",
+      "Agent 工程"
+    ],
+    "title": "别急着拆分 Agent：先证明它真的需要一个子 Agent",
+    "seoTitle": "Agent 拆得越多越好吗？先证明每个子 Agent 值得存在"
+  },
+  {
+    "category": "Agent 工程",
+    "categorySlug": "agent-engineering",
     "date": "2026-10-27",
     "excerpt": "一个 Agent 接到任务后，需要等待几小时、几天，甚至跨越服务器重启继续执行，问题就从模型能力转向了系统设计。《Build Long-Running Agents》围绕 Google ADK 的长时运行工作流，拆出了六层架构：Trigger、Runner、State、Resumable Workflow、Human Gate 和 Guards，分别负责唤醒、执行、记忆、恢复、授权和安全检查。",
     "seoDescription": "长时运行 Agent 怎么做？六层架构拆开看：触发器唤醒、Runner 执行、状态持久化、可恢复工作流、人工关卡与防护如何配合，演唱会抢票的例子讲清恢复、授权与幂等。",
@@ -27,7 +49,7 @@
     "date": "2026-10-27",
     "excerpt": "一个 Agent 执行任务时，通常需要反复向模型提交上下文：系统指令、工具定义、用户任务、历史对话、工具调用记录，以及工具返回的结果。任务越长，历史越多；如果每一轮都重新处理全部输入，计算开销也会随之累积。",
     "seoDescription": "Agent 每轮重读全部历史，成本按轮次累积。Prompt Caching 的解法是把上下文按稳定程度分层：稳定前缀、任务状态、临时输入，配合显式与隐式断点、缓存键与预热，让重复输入只算一次。",
-    "featured": true,
+    "featured": false,
     "readingMinutes": 10,
     "slug": "bedrock-prompt-caching",
     "source": {

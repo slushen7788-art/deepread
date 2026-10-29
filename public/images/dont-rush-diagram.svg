@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="300" viewBox="0 0 880 300">
+<rect width="880" height="300" fill="#fdf6ec"/>
+<g font-family="sans-serif">
+<text x="440" y="38" font-size="23" font-weight="bold" text-anchor="middle" fill="#222">迁移不是一次重写，是一连串可比较的实验</text>
+<rect x="40" y="65" width="250" height="84" rx="10" fill="#ffffff" stroke="#bbb"/>
+<text x="165" y="93" font-size="15" font-weight="bold" text-anchor="middle" fill="#333">Measure · 先测量</text>
+<text x="165" y="117" font-size="14" text-anchor="middle" fill="#555">审计 + 端到端评估基线</text>
+<text x="165" y="139" font-size="14" text-anchor="middle" fill="#555">每个子 Agent 一个裁决</text>
+<rect x="315" y="65" width="250" height="84" rx="10" fill="#ffffff" stroke="#bbb"/>
+<text x="440" y="93" font-size="15" font-weight="bold" text-anchor="middle" fill="#333">Combine · 合并</text>
+<text x="440" y="117" font-size="14" text-anchor="middle" fill="#555">常一起跑的先合</text>
+<text x="440" y="139" font-size="14" text-anchor="middle" fill="#555">链式调用 · 同一份数据</text>
+<rect x="590" y="65" width="250" height="84" rx="10" fill="#ffffff" stroke="#bbb"/>
+<text x="715" y="93" font-size="15" font-weight="bold" text-anchor="middle" fill="#333">Fold · 逐个折叠</text>
+<text x="715" y="117" font-size="14" text-anchor="middle" fill="#555">提示词变技能 · 调用变工具</text>
+<text x="715" y="139" font-size="14" text-anchor="middle" fill="#555">一次一行 · 对比定去留</text>
+<text x="440" y="185" font-size="15" text-anchor="middle" fill="#444">每次改动后只问一件事：任务完成、延迟、调用数、Token、成本，变好了还是变坏了</text>
+<text x="440" y="213" font-size="15" text-anchor="middle" fill="#444">只看总分不够，还要看哪些任务翻转、路由有没有绕远、关键规则有没有被跳过</text>
+<text x="440" y="249" font-size="15" font-weight="bold" text-anchor="middle" fill="#333">保留也算成果：每个留下来的边界，都要有留下的分数</text>
+</g>
+</svg>

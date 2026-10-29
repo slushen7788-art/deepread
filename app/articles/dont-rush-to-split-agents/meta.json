@@ -1,0 +1,22 @@
+{
+  "category": "Agent 工程",
+  "categorySlug": "agent-engineering",
+  "date": "2026-10-29",
+  "excerpt": "我认为，这两份材料真正值得借鉴的地方，是它们把 Agent 架构从“如何拆分职责”转向了一个更可验证的问题：独立的上下文、模型调用和执行边界，究竟为任务质量带来了多少实际收益？",
+  "seoDescription": "Anthropic 的折叠子 Agent 方案与 single-agent-loop-kit 给出的思路：从端到端评估开始，找出经常一起运行的 Agent，逐个将其转为 Skills 和 Tools，再通过重复评估决定是否保留独立边界。",
+  "featured": true,
+  "readingMinutes": 12,
+  "slug": "dont-rush-to-split-agents",
+  "source": {
+    "outlet": "GitHub",
+    "title": "anthropics/single-agent-loop-kit",
+    "url": "https://github.com/anthropics/single-agent-loop-kit"
+  },
+  "tags": [
+    "Agent 架构",
+    "Subagent",
+    "Agent 工程"
+  ],
+  "title": "别急着拆分 Agent：先证明它真的需要一个子 Agent",
+  "seoTitle": "Agent 拆得越多越好吗？先证明每个子 Agent 值得存在"
+}
