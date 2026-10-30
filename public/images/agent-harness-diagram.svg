@@ -1,89 +1,22 @@
-<svg viewBox="0 0 720 470" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Agent Harness 核心机制图" style="width:100%;height:auto;font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;">
-  <defs>
-    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0,0 L10,5 L0,10 z" fill="#8a8578"/>
-    </marker>
-    <marker id="arrO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-      <path d="M0,0 L10,5 L0,10 z" fill="#e8590c"/>
-    </marker>
-  </defs>
-
-  <!-- 区标题 -->
-  <text x="20" y="22" font-size="13" fill="#a39e8f" letter-spacing="2">内层循环 · 厂商提供，你改不了多少</text>
-  <text x="470" y="238" font-size="13" fill="#a39e8f" letter-spacing="2">外层控制 · 由你设计的那一半</text>
-
-  <!-- 循环四框 -->
-  <g font-size="15" fill="#1d1d1f" text-anchor="middle">
-    <rect x="20" y="36" width="140" height="58" rx="10" fill="#fff" stroke="#d8d2c4" stroke-width="1.5"/>
-    <text x="90" y="61">任务 + 全部历史</text>
-    <text x="90" y="82" font-size="12" fill="#8a8578">每一轮整体重发</text>
-
-    <rect x="205" y="36" width="130" height="58" rx="10" fill="#fff7ed" stroke="#e8590c" stroke-width="2"/>
-    <text x="270" y="61" font-weight="600">模型决策</text>
-    <text x="270" y="82" font-size="12" fill="#8a8578">要工具 / 给结论</text>
-
-    <rect x="380" y="36" width="140" height="58" rx="10" fill="#fff" stroke="#d8d2c4" stroke-width="1.5"/>
-    <text x="450" y="61">执行工具调用</text>
-    <text x="450" y="82" font-size="12" fill="#8a8578">在真实环境里跑</text>
-
-    <rect x="565" y="36" width="135" height="58" rx="10" fill="#fff" stroke="#d8d2c4" stroke-width="1.5"/>
-    <text x="632" y="61">结果回填历史</text>
-    <text x="632" y="82" font-size="12" fill="#8a8578">拼进下一轮输入</text>
-  </g>
-
-  <!-- 循环箭头 -->
-  <line x1="162" y1="65" x2="200" y2="65" stroke="#8a8578" stroke-width="1.5" marker-end="url(#arr)"/>
-  <line x1="337" y1="65" x2="375" y2="65" stroke="#8a8578" stroke-width="1.5" marker-end="url(#arr)"/>
-  <line x1="522" y1="65" x2="560" y2="65" stroke="#8a8578" stroke-width="1.5" marker-end="url(#arr)"/>
-  <path d="M632,96 L632,128 L270,128 L270,99" fill="none" stroke="#8a8578" stroke-width="1.5" marker-end="url(#arr)"/>
-  <text x="451" y="121" font-size="12.5" fill="#8a8578" text-anchor="middle">循环，直到模型不再要工具</text>
-
-  <!-- 退出路径 -->
-  <line x1="90" y1="96" x2="90" y2="168" stroke="#e8590c" stroke-width="2" marker-end="url(#arrO)"/>
-  <text x="100" y="138" font-size="12.5" fill="#e8590c">模型给出最终消息</text>
-
-  <g font-size="15" fill="#1d1d1f" text-anchor="middle">
-    <rect x="20" y="172" width="230" height="62" rx="10" fill="#fff7ed" stroke="#e8590c" stroke-width="2"/>
-    <text x="135" y="197" font-weight="600">决策 1 · 停止规则检查</text>
-    <text x="135" y="218" font-size="12.5" fill="#8a8578">测试通过？应用能启动？轮数/时间上限</text>
-
-    <rect x="300" y="172" width="190" height="62" rx="10" fill="#fff" stroke="#d8d2c4" stroke-width="1.5"/>
-    <text x="395" y="197">决策 6 · 独立验收</text>
-    <text x="395" y="218" font-size="12.5" fill="#8a8578">新会话 · 实跑 · 按最差一次判</text>
-
-    <rect x="540" y="172" width="120" height="62" rx="10" fill="#e8590c"/>
-    <text x="600" y="210" fill="#fff" font-weight="600">完成</text>
-  </g>
-  <line x1="252" y1="203" x2="295" y2="203" stroke="#8a8578" stroke-width="1.5" marker-end="url(#arr)"/>
-  <line x1="492" y1="203" x2="535" y2="203" stroke="#8a8578" stroke-width="1.5" marker-end="url(#arr)"/>
-
-  <path d="M135,236 L135,268" stroke="#8a8578" stroke-width="1.5" marker-end="url(#arr)"/>
-  <g font-size="13.5" fill="#45423c" text-anchor="middle">
-    <rect x="20" y="272" width="230" height="40" rx="8" fill="#faf8f3" stroke="#e9e4d8"/>
-    <text x="135" y="297">坏结局：带失败信息重启 / 冻结等人</text>
-  </g>
-
-  <!-- 底部四个控制面 -->
-  <text x="20" y="352" font-size="13" fill="#a39e8f" letter-spacing="2">贯穿全程的四个控制面</text>
-  <g font-size="14" fill="#1d1d1f" text-anchor="middle">
-    <rect x="20" y="364" width="160" height="76" rx="10" fill="#fff" stroke="#d8d2c4" stroke-width="1.5"/>
-    <text x="100" y="390" font-weight="600">决策 2 · 工具菜单</text>
-    <text x="100" y="412" font-size="12.5" fill="#8a8578">按需加载</text>
-    <text x="100" y="430" font-size="12.5" fill="#8a8578">错误要给结构</text>
-
-    <rect x="196" y="364" width="160" height="76" rx="10" fill="#fff" stroke="#d8d2c4" stroke-width="1.5"/>
-    <text x="276" y="390" font-weight="600">决策 3 · 规则固定</text>
-    <text x="276" y="412" font-size="12.5" fill="#8a8578">事实可摘要</text>
-    <text x="276" y="430" font-size="12.5" fill="#8a8578">硬规则不进压缩</text>
-
-    <rect x="372" y="364" width="160" height="76" rx="10" fill="#fff" stroke="#d8d2c4" stroke-width="1.5"/>
-    <text x="452" y="390" font-weight="600">决策 4 · 状态落盘</text>
-    <text x="452" y="412" font-size="12.5" fill="#8a8578">四文件 + Git 提交</text>
-    <text x="452" y="430" font-size="12.5" fill="#8a8578">崩溃后能接续</text>
-
-    <rect x="548" y="364" width="152" height="76" rx="10" fill="#fff" stroke="#d8d2c4" stroke-width="1.5"/>
-    <text x="624" y="390" font-weight="600">决策 5 · 权限边界</text>
-    <text x="624" y="412" font-size="12.5" fill="#8a8578">OS 层目录/网络限制</text>
-    <text x="624" y="430" font-size="12.5" fill="#8a8578">短期凭据，不靠审批框</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="330" viewBox="0 0 880 330">
+<rect width="880" height="330" fill="#fdf6ec"/>
+<g font-family="sans-serif">
+<text x="440" y="38" font-size="23" font-weight="bold" text-anchor="middle" fill="#222">Agent = Model + Harness</text>
+<rect x="40" y="65" width="250" height="84" rx="10" fill="#ffffff" stroke="#bbb"/>
+<text x="165" y="93" font-size="15" font-weight="bold" text-anchor="middle" fill="#333">Model · 模型</text>
+<text x="165" y="117" font-size="14" text-anchor="middle" fill="#555">推理 · 决策 · 生成</text>
+<text x="165" y="139" font-size="14" text-anchor="middle" fill="#555">只管想，不直接兜底</text>
+<rect x="315" y="65" width="250" height="84" rx="10" fill="#ffe1b8" stroke="#d99a4e"/>
+<text x="440" y="93" font-size="15" font-weight="bold" text-anchor="middle" fill="#333">Harness · 工程系统</text>
+<text x="440" y="117" font-size="14" text-anchor="middle" fill="#555">状态持久 · 沙箱隔离 · 权限校验</text>
+<text x="440" y="139" font-size="14" text-anchor="middle" fill="#555">轨迹观测 · 评估校验 · 强制审批</text>
+<rect x="590" y="65" width="250" height="84" rx="10" fill="#ffffff" stroke="#bbb"/>
+<text x="715" y="93" font-size="15" font-weight="bold" text-anchor="middle" fill="#333">公共承载层 · Agentic OS</text>
+<text x="715" y="117" font-size="14" text-anchor="middle" fill="#555">调度 · 授权 · 审计 · 快照</text>
+<text x="715" y="139" font-size="14" text-anchor="middle" fill="#555">跨应用通用，不碰任务语义</text>
+<text x="440" y="185" font-size="15" text-anchor="middle" fill="#444">形态谱系不是升级链，是两个独立维度：时间跨度 × 协作结构</text>
+<text x="440" y="213" font-size="15" text-anchor="middle" fill="#444">先把边界清晰的单智能体跑稳，受限于上下文、权限、角色复杂度时再加复杂度</text>
+<text x="440" y="249" font-size="15" font-weight="bold" text-anchor="middle" fill="#333">L4 是规模化运营状态，不是新形态：单智能体也可以落在 L4</text>
+<text x="440" y="285" font-size="14" text-anchor="middle" fill="#777">选型看风险匹配的最低充分架构，不是追 Multi-Agent 或者长时任务</text>
+</g>
 </svg>

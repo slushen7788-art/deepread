@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ArticleShell meta={meta}>
+    <ArticleShell meta={meta} next={{ slug: "agent-model-harness", title: "Agent 的生产化瓶颈不在模型，在 Harness" }}>
       <div>
         <p>做 Agent 系统设计时，很容易出现一种熟悉的架构演进。</p>
         <p>最初只有一个模型和几个工具。随着功能增加，开发者开始加入意图分类器、Planner、Router，再按业务领域拆出客服 Agent、订单 Agent、物流 Agent、推荐 Agent。每个 Agent 都有自己的 Prompt、工具和评估集，最后由一个 Orchestrator 把它们串起来。</p>

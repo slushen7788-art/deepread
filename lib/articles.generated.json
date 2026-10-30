@@ -2,10 +2,32 @@
   {
     "category": "Agent 工程",
     "categorySlug": "agent-engineering",
+    "date": "2026-10-30",
+    "excerpt": "这份白皮书表面在给 Agent 划分代际和成熟度，真正在锚定一条工程底线：模型只是决策部件，Agent 的生产化瓶颈全部在 Harness，选型的核心不是追 Multi-Agent 或者长时任务，而是匹配风险的最低充分架构。",
+    "seoDescription": "白皮书第 1 章的判断：模型只管推理和决策，状态持久、沙箱隔离、权限校验、轨迹观测、评估校验全部属于 Harness；形态谱系沿时间与协作两个维度扩展，选型看风险匹配的最低充分架构，L4 是规模化运营状态而非新形态。",
+    "featured": true,
+    "readingMinutes": 2,
+    "slug": "agent-model-harness",
+    "source": {
+      "outlet": "AI Agent Handbook",
+      "title": "第 1 章 AI 原生应用的新阶段",
+      "url": "https://aliyun.github.io/ai-agent-handbook/architecture/chapter-01.html"
+    },
+    "tags": [
+      "Agent 架构",
+      "Harness",
+      "Agent 工程"
+    ],
+    "title": "Agent 的生产化瓶颈不在模型，在 Harness",
+    "seoTitle": "Agent 上不了生产，瓶颈不在模型在 Harness"
+  },
+  {
+    "category": "Agent 工程",
+    "categorySlug": "agent-engineering",
     "date": "2026-10-29",
     "excerpt": "我认为，这两份材料真正值得借鉴的地方，是它们把 Agent 架构从“如何拆分职责”转向了一个更可验证的问题：独立的上下文、模型调用和执行边界，究竟为任务质量带来了多少实际收益？",
     "seoDescription": "Anthropic 的折叠子 Agent 方案与 single-agent-loop-kit 给出的思路：从端到端评估开始，找出经常一起运行的 Agent，逐个将其转为 Skills 和 Tools，再通过重复评估决定是否保留独立边界。",
-    "featured": true,
+    "featured": false,
     "readingMinutes": 12,
     "slug": "dont-rush-to-split-agents",
     "source": {
