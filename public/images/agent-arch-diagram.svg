@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="400" viewBox="0 0 880 400">
+<rect width="880" height="400" fill="#fdf6ec"/>
+<g font-family="sans-serif">
+<text x="440" y="38" font-size="23" font-weight="bold" text-anchor="middle" fill="#222">五层责任域：按业务目标到持续优化的链路切开</text>
+<rect x="40" y="65" width="760" height="44" rx="8" fill="#ffffff" stroke="#bbb"/>
+<text x="60" y="93" font-size="15" font-weight="bold" fill="#333">业务层</text>
+<text x="200" y="93" font-size="14" fill="#555">只定目标、验收条件、触发方式，不碰通用 Agent 能力</text>
+<rect x="40" y="119" width="760" height="44" rx="8" fill="#ffffff" stroke="#bbb"/>
+<text x="60" y="147" font-size="15" font-weight="bold" fill="#333">编排层</text>
+<text x="200" y="147" font-size="14" fill="#555">构造循环、上下文策略、工具约束、中间结果校验</text>
+<rect x="40" y="173" width="760" height="44" rx="8" fill="#ffffff" stroke="#bbb"/>
+<text x="60" y="201" font-size="15" font-weight="bold" fill="#333">生产运行层</text>
+<text x="200" y="201" font-size="14" fill="#555">调度、隔离、断点恢复、资源管控</text>
+<rect x="40" y="227" width="760" height="44" rx="8" fill="#ffffff" stroke="#bbb"/>
+<text x="60" y="255" font-size="15" font-weight="bold" fill="#333">治理控制层</text>
+<text x="200" y="255" font-size="14" fill="#555">版本、身份、策略、审计，决定哪些动作被允许</text>
+<rect x="40" y="281" width="760" height="44" rx="8" fill="#ffffff" stroke="#bbb"/>
+<text x="60" y="309" font-size="15" font-weight="bold" fill="#333">调优层</text>
+<text x="200" y="309" font-size="14" fill="#555">从运行轨迹拿证据产出变更，变更回流编排层，再走治理门禁</text>
+<text x="440" y="352" font-size="15" font-weight="bold" text-anchor="middle" fill="#333">安全不是单独一个模块，是贯穿五层的横切责任</text>
+<text x="440" y="378" font-size="14" text-anchor="middle" fill="#777">三个视图互不替代：组件视图防遗漏 · 平台视图分权责 · 生命周期视图管变更</text>
+</g>
+</svg>

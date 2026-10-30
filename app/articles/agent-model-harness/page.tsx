@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ArticleShell meta={meta} prev={{ slug: "dont-rush-to-split-agents", title: "别急着拆分 Agent：先证明它真的需要一个子 Agent" }}>
+    <ArticleShell meta={meta} prev={{ slug: "dont-rush-to-split-agents", title: "别急着拆分 Agent：先证明它真的需要一个子 Agent" }} next={{ slug: "agent-reference-architecture", title: "Agent 架构先划边界，再堆组件" }}>
       <div>
         <p>这份白皮书表面在给 Agent 划分代际和成熟度，真正在锚定一条工程底线：模型只是决策部件，Agent 的生产化瓶颈全部在 Harness，选型的核心不是追 Multi-Agent 或者长时任务，而是匹配风险的最低充分架构。</p>
         <p>它把前一代 AI 应用的矛盾点说得很清楚：Chat/RAG、Workflow、Copilot 都把执行路径提前锁死，模型只负责生成内容或者填参数，人在全程兜底。Coding Agent 之所以成为拐点，不是因为代码场景炫酷，而是它一次性把所有生产级痛点暴露出来：上下文装不下全量仓库、任务要跨多轮维持计划、工具调用会修改真实文件、失败要支持回滚重试、结果不能靠模型自评、高风险动作要有人在回路拦截。这些问题在代码场景跑通之后，才可以平移到数据分析、工单处理、知识库维护这类别的业务里。</p>
