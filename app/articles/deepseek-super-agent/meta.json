@@ -4,7 +4,7 @@
   "date": "2026-11-02",
   "excerpt": "Super-agent 真正在解决的问题，排在模型一次能做多少事前面：人一次能跟进几个 Session。单 Session 设计下，多任务的上限钉死在人的注意力上，一个人通常只能同时跟进 3 到 5 个活跃 Session，任务一多就得手动切换、自己记住每个 Session 的上下文。Super-agent 的做法，是把 Session 从用户认知里抽掉，变成系统内部的实现细节，让用户面对的始终是同一个 Agent。",
   "seoDescription": "Super-agent 把 Session 从用户认知里抽掉：Router 只分派不执行、Worker 按 Thread 订阅直通、窗口当 Cache 管、云端计算与端侧环境分离；分工靠结构保证，不靠提示词劝。",
-  "featured": true,
+  "featured": false,
   "readingMinutes": 8,
   "slug": "deepseek-super-agent",
   "source": {

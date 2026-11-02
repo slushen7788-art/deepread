@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="430" viewBox="0 0 880 430">
+<rect width="880" height="430" fill="#fdf6ec"/>
+<g font-family="sans-serif">
+<text x="440" y="36" font-size="22" font-weight="bold" text-anchor="middle" fill="#222">Droid 1.0：调用权从对话转移到程序</text>
+<rect x="40" y="60" width="380" height="88" rx="8" fill="#ffffff" stroke="#bbb"/>
+<text x="230" y="86" font-size="15" font-weight="bold" text-anchor="middle" fill="#333">直接调用（旧）</text>
+<text x="230" y="108" font-size="13" text-anchor="middle" fill="#555">每步一次模型请求，指令 + 工具 + 历史每步重发</text>
+<text x="230" y="128" font-size="13" text-anchor="middle" fill="#555">Linear 清理：36 次请求，约 310 万 token</text>
+<rect x="460" y="60" width="380" height="88" rx="8" fill="#ffffff" stroke="#bbb"/>
+<text x="650" y="86" font-size="15" font-weight="bold" text-anchor="middle" fill="#333">Script 模式（PTC）</text>
+<text x="650" y="108" font-size="13" text-anchor="middle" fill="#555">模型写 JS 程序，沙箱里一次跑完几百次调用</text>
+<text x="650" y="128" font-size="13" text-anchor="middle" fill="#555">Linear 清理：2 次请求，约 6.1 万 token</text>
+<rect x="40" y="172" width="800" height="52" rx="8" fill="#ffffff" stroke="#bbb"/>
+<text x="440" y="192" font-size="14" text-anchor="middle" fill="#333">程序内：真实数据 + 原始文本块 + 编辑短摘要 + 并发（耗时取最慢者）</text>
+<text x="440" y="210" font-size="14" text-anchor="middle" fill="#333">长任务不阻塞（5 分钟交目前输出 / 后台启动立刻返回）· 无轮询（做完叫醒模型）</text>
+<rect x="40" y="240" width="800" height="52" rx="8" fill="#ffffff" stroke="#bbb"/>
+<text x="440" y="260" font-size="14" text-anchor="middle" fill="#333">缓存不变量：请求严格追加式，新工具追加到末尾，缓存前缀纹丝不动</text>
+<text x="440" y="278" font-size="14" text-anchor="middle" fill="#333">monitor 逐请求点名破坏者 · 生产典型请求 98% 读自缓存</text>
+<rect x="40" y="308" width="800" height="52" rx="8" fill="#ffffff" stroke="#bbb"/>
+<text x="440" y="328" font-size="14" text-anchor="middle" fill="#333">Agent Factory：20+ 模型追踪 → 行为断言 → 产品内评估 → 带假设提案 → 对照实验</text>
+<text x="440" y="346" font-size="14" text-anchor="middle" fill="#333">目标必须在所有模型家族成立 · 工程师按证据放行</text>
+<rect x="40" y="376" width="800" height="34" rx="8" fill="#ffffff" stroke="#bbb"/>
+<text x="440" y="398" font-size="14" text-anchor="middle" fill="#333">有界自主：规则在循环里（3 次无输出停 / 3 次重复 nudge / 6 次停）· 热路径压到毫秒级</text>
+</g>
+</svg>

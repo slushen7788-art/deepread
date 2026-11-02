@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ArticleShell meta={meta} prev={{ slug: "agent-reference-architecture", title: "Agent 架构先划边界，再堆组件" }}>
+    <ArticleShell meta={meta} prev={{ slug: "agent-reference-architecture", title: "Agent 架构先划边界，再堆组件" }} next={{ slug: "droid-frontier-harness", title: "Droid 1.0：把工具调用从对话里抽出来，变成程序一次跑完" }}>
       <div>
         <p>Super-agent 真正在解决的问题，排在模型一次能做多少事前面：人一次能跟进几个 Session。单 Session 设计下，多任务的上限钉死在人的注意力上，一个人通常只能同时跟进 3 到 5 个活跃 Session，任务一多就得手动切换、自己记住每个 Session 的上下文。Super-agent 的做法，是把 Session 从用户认知里抽掉，变成系统内部的实现细节，让用户面对的始终是同一个 Agent。</p>
         <p>四个基础特征先摆出来：连续，用户在 IM、GitHub 评论这些熟悉界面里交互，感觉只存在一个 Agent，不用去想某条信息在哪个 Session 的上下文里；高效，响应快，多任务并行推进，不用等上一个命令跑完就能接下一条指令；主动，持续观察环境事件，值得处理的事项自己推进，不需要介入时保持安静；持久，始终在线，直接接入真实工作环境，长期运行遇到异常自动恢复。单个 ReAct Loop 撑不起这四个特征，底下得有一套对应的架构，而这套架构的每一块，几乎都能在计算机系统里找到对应的老办法。</p>

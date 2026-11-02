@@ -3,9 +3,31 @@
     "category": "Agent 工程",
     "categorySlug": "agent-engineering",
     "date": "2026-11-02",
+    "excerpt": "Droid 1.0 真正在优化的东西，排在模型本身前面：长任务里每一次请求都在重复支付的成本。Agent 跑上几小时、几百个 turn，每一步都要把指令、工具定义和历史重新发一遍，对话式循环本身就是最贵的那个部件。Droid 的做法，是把工具调用从对话里抽出来，变成模型写的一段程序一次跑完，再配上一套以缓存为中心的纪律，让成本尽量花在推理上，而不是重发上。",
+    "seoDescription": "Droid 1.0 把工具调用从对话里抽出来变成程序一次跑完：Script 模式、缓存前缀不变量、Agent Factory 跨模型门禁、有界自主护栏，小团队可直接抄四件套。",
+    "featured": true,
+    "readingMinutes": 6,
+    "slug": "droid-frontier-harness",
+    "source": {
+      "outlet": "Factory",
+      "title": "Droid 1.0: Building a Frontier Harness",
+      "url": "https://factory.com/news/frontier-harness"
+    },
+    "tags": [
+      "Droid",
+      "Harness",
+      "Agent 工程"
+    ],
+    "title": "Droid 1.0：把工具调用从对话里抽出来，变成程序一次跑完",
+    "seoTitle": "长任务越跑越贵，问题出在调用方式上？"
+  },
+  {
+    "category": "Agent 工程",
+    "categorySlug": "agent-engineering",
+    "date": "2026-11-02",
     "excerpt": "Super-agent 真正在解决的问题，排在模型一次能做多少事前面：人一次能跟进几个 Session。单 Session 设计下，多任务的上限钉死在人的注意力上，一个人通常只能同时跟进 3 到 5 个活跃 Session，任务一多就得手动切换、自己记住每个 Session 的上下文。Super-agent 的做法，是把 Session 从用户认知里抽掉，变成系统内部的实现细节，让用户面对的始终是同一个 Agent。",
     "seoDescription": "Super-agent 把 Session 从用户认知里抽掉：Router 只分派不执行、Worker 按 Thread 订阅直通、窗口当 Cache 管、云端计算与端侧环境分离；分工靠结构保证，不靠提示词劝。",
-    "featured": true,
+    "featured": false,
     "readingMinutes": 8,
     "slug": "deepseek-super-agent",
     "source": {
