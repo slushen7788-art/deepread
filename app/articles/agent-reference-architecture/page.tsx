@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ArticleShell meta={meta} prev={{ slug: "agent-model-harness", title: "Agent 的生产化瓶颈不在模型，在 Harness" }}>
+    <ArticleShell meta={meta} prev={{ slug: "agent-model-harness", title: "Agent 的生产化瓶颈不在模型，在 Harness" }} next={{ slug: "deepseek-super-agent", title: "Super-agent：多任务的上限不该由人的注意力来定" }}>
       <div>
         <p>Agentic Application 这套参考架构的核心，不是给你一套固定组件清单去搭建 Agent，而是把 Agent 的风险根源定位在边界混淆上，用责任域划分、三个正交视图、五阶段闭环，建立一套和任务风险匹配的最低充分架构。</p>
         <p>很多人做 Agent 的时候习惯把所有东西揉在同一个循环里：模型提示词、任务状态、对话历史、工具权限、运行调度堆在一起，演示时跑起来很顺畅，一旦任务变长、多租户接入、工具变多，故障就会集中爆发。它把最常见的四类边界问题拆得很清楚：模型和 Harness 绑定过死，换模型就要改整套业务逻辑；编排逻辑和 Runtime 混在一起，换执行环境就要重写任务；上下文和持久任务状态不分，压缩摘要直接弄丢任务事实；工具的可发现和执行权限混为一谈，模型能看到工具就等于可以直接执行。</p>

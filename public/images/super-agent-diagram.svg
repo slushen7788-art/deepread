@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="430" viewBox="0 0 880 430">
+<rect width="880" height="430" fill="#fdf6ec"/>
+<g font-family="sans-serif">
+<text x="440" y="36" font-size="22" font-weight="bold" text-anchor="middle" fill="#222">Super-agent 双层架构：Router 管连续，Worker 管并发</text>
+<rect x="250" y="60" width="380" height="52" rx="8" fill="#ffffff" stroke="#bbb"/>
+<text x="440" y="82" font-size="15" font-weight="bold" text-anchor="middle" fill="#333">Router 层（常驻）</text>
+<text x="440" y="102" font-size="13" text-anchor="middle" fill="#555">全局序点、协调点和记忆 · 只分派不执行 · 轻模型 · 批处理</text>
+<text x="440" y="135" font-size="20" text-anchor="middle" fill="#999">↓ 分派任务 / 统一对外回复 ↓</text>
+<rect x="40" y="150" width="240" height="72" rx="8" fill="#ffffff" stroke="#bbb"/>
+<text x="160" y="175" font-size="15" font-weight="bold" text-anchor="middle" fill="#333">Worker A</text>
+<text x="160" y="195" font-size="13" text-anchor="middle" fill="#555">上下文隔离 · 最强模型</text>
+<text x="160" y="212" font-size="13" text-anchor="middle" fill="#555">订阅 Thread 1</text>
+<rect x="320" y="150" width="240" height="72" rx="8" fill="#ffffff" stroke="#bbb"/>
+<text x="440" y="175" font-size="15" font-weight="bold" text-anchor="middle" fill="#333">Worker B</text>
+<text x="440" y="195" font-size="13" text-anchor="middle" fill="#555">上下文隔离 · 最强模型</text>
+<text x="440" y="212" font-size="13" text-anchor="middle" fill="#555">订阅 Thread 1、Thread 2</text>
+<rect x="600" y="150" width="240" height="72" rx="8" fill="#ffffff" stroke="#bbb"/>
+<text x="720" y="175" font-size="15" font-weight="bold" text-anchor="middle" fill="#333">Worker C</text>
+<text x="720" y="195" font-size="13" text-anchor="middle" fill="#555">上下文隔离 · 最强模型</text>
+<text x="720" y="212" font-size="13" text-anchor="middle" fill="#555">订阅 Thread 2</text>
+<text x="440" y="252" font-size="14" text-anchor="middle" fill="#555">Thread 后续事件由程序直通已订阅 Worker，不再经过 Router 转发</text>
+<text x="440" y="276" font-size="14" text-anchor="middle" fill="#555">新任务冷启动与跨任务协调仍走 Router（Slow Path）</text>
+<rect x="40" y="300" width="800" height="44" rx="8" fill="#ffffff" stroke="#bbb"/>
+<text x="440" y="328" font-size="14" text-anchor="middle" fill="#333">事件过滤：程序层 Fast Path 先筛噪音 → 语义层 Slow Path 再判断</text>
+<rect x="40" y="356" width="800" height="44" rx="8" fill="#ffffff" stroke="#bbb"/>
+<text x="440" y="384" font-size="14" text-anchor="middle" fill="#333">外层：云端无状态计算 + 数据库状态 + 端侧 daemon（BYOM）· Watchdog 外部控制回路</text>
+</g>
+</svg>
