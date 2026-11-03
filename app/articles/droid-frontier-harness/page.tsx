@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ArticleShell meta={meta} prev={{ slug: "deepseek-super-agent", title: "Super-agent：多任务的上限不该由人的注意力来定" }}>
+    <ArticleShell meta={meta} prev={{ slug: "deepseek-super-agent", title: "Super-agent：多任务的上限不该由人的注意力来定" }} next={{ slug: "critical-thinking-when-agents-do-the-work", title: "Agent 交活之后，验收从逐行读过，移到了事先定好什么算验过" }}>
       <div>
         <p>Droid 1.0 真正在优化的东西，排在模型本身前面：长任务里每一次请求都在重复支付的成本。Agent 跑上几小时、几百个 turn，每一步都要把指令、工具定义和历史重新发一遍，对话式循环本身就是最贵的那个部件。Droid 的做法，是把工具调用从对话里抽出来，变成模型写的一段程序一次跑完，再配上一套以缓存为中心的纪律，让成本尽量花在推理上，而不是重发上。</p>
         <p>先说 PTC。标准循环里模型直接调工具，每个工具输出都追加进上下文。Programmatic tool calling 换了一个做法：模型先推理、写出调用工具的程序，再把整个程序一次执行完。Droid 把它实现成一个 Script 工具：模型写 JavaScript，在一个自身没有文件、网络和系统访问权限的沙箱里跑。Script 一次模型请求里可以发起几百次工具调用，指令和历史只发一次；打印输出有大小上限，完整结果记在日志里，模型事后可以搜索；互不依赖的调用并发跑，一批耗时取决于最慢的那次调用。因为调用是代码，前一个结果可以直接决定下一个调用：搜索、读遍所有匹配、过滤结果，一次跑完；直接调用的话，每一步都要花一次模型请求。</p>

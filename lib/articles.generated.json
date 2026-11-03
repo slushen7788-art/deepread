@@ -1,11 +1,33 @@
 [
   {
+    "category": "AI 方法论",
+    "categorySlug": "ai-methodology",
+    "date": "2026-11-03",
+    "excerpt": "Agent 交活越来越多之后，批判性思维卡住的地方是验收。过去审东西的方式是逐行读过，现在产出多到读不过来，判断只能换个地方落：动手之前先定好什么才算验过，拿到结果之后抽查它替你做的决定。",
+    "featured": true,
+    "readingMinutes": 5,
+    "seoDescription": "批判性思维卡住的地方是验收：事先定义 verified、事后抽查决策清单；但按需重建理解对新人是陷阱，验收工具同源时最后一环由谁来验。",
+    "seoTitle": "产出多到读不过来，验收还能靠逐行读吗？",
+    "slug": "critical-thinking-when-agents-do-the-work",
+    "source": {
+      "outlet": "X 文章 · Addy Osmani",
+      "title": "Critical thinking when agents do the work",
+      "url": "https://x.com/addyosmani/status/2117512471930167377"
+    },
+    "tags": [
+      "批判性思维",
+      "Agent 验证",
+      "代码评审"
+    ],
+    "title": "Agent 交活之后，验收从逐行读过，移到了事先定好什么算验过"
+  },
+  {
     "category": "Agent 工程",
     "categorySlug": "agent-engineering",
     "date": "2026-11-02",
     "excerpt": "Droid 1.0 真正在优化的东西，排在模型本身前面：长任务里每一次请求都在重复支付的成本。Agent 跑上几小时、几百个 turn，每一步都要把指令、工具定义和历史重新发一遍，对话式循环本身就是最贵的那个部件。Droid 的做法，是把工具调用从对话里抽出来，变成模型写的一段程序一次跑完，再配上一套以缓存为中心的纪律，让成本尽量花在推理上，而不是重发上。",
     "seoDescription": "Droid 1.0 把工具调用从对话里抽出来变成程序一次跑完：Script 模式、缓存前缀不变量、Agent Factory 跨模型门禁、有界自主护栏，小团队可直接抄四件套。",
-    "featured": true,
+    "featured": false,
     "readingMinutes": 6,
     "slug": "droid-frontier-harness",
     "source": {

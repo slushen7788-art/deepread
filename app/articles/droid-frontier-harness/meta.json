@@ -4,7 +4,7 @@
   "date": "2026-11-02",
   "excerpt": "Droid 1.0 真正在优化的东西，排在模型本身前面：长任务里每一次请求都在重复支付的成本。Agent 跑上几小时、几百个 turn，每一步都要把指令、工具定义和历史重新发一遍，对话式循环本身就是最贵的那个部件。Droid 的做法，是把工具调用从对话里抽出来，变成模型写的一段程序一次跑完，再配上一套以缓存为中心的纪律，让成本尽量花在推理上，而不是重发上。",
   "seoDescription": "Droid 1.0 把工具调用从对话里抽出来变成程序一次跑完：Script 模式、缓存前缀不变量、Agent Factory 跨模型门禁、有界自主护栏，小团队可直接抄四件套。",
-  "featured": true,
+  "featured": false,
   "readingMinutes": 6,
   "slug": "droid-frontier-harness",
   "source": {
