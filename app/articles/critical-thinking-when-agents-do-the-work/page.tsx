@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ArticleShell meta={meta} prev={{ slug: "droid-frontier-harness", title: "Droid 1.0：把工具调用从对话里抽出来，变成程序一次跑完" }}>
+    <ArticleShell meta={meta} prev={{ slug: "droid-frontier-harness", title: "Droid 1.0：把工具调用从对话里抽出来，变成程序一次跑完" }} next={{ slug: "message-threads", title: "Claude 消息线程：长会话越跑越慢，慢在每轮都要把历史再发一遍" }}>
       <div>
         <p>Agent 交活越来越多之后，批判性思维卡住的地方是验收。过去审东西的方式是逐行读过，现在产出多到读不过来，判断只能换个地方落：动手之前先定好什么才算验过，拿到结果之后抽查它替你做的决定。</p>
         <p>这条滑落的线是渐进的，每一步看起来都合理。最上层是外包：任务交给 Agent，结果的所有权还在自己手里，检查的动作还在。中间一层是移交：Agent 的输出直接变成下一步的输入，不再被当成一个有待验证的假设。最底层是认知投降（cognitive surrender）：输出悄悄变成自己的，连检查的念头都不起了。从上一层滑到下一层没有明显的台阶，上一次认真读了，这一次只扫一眼，再下一次只看骨架，最后被问到某一行，连着 Agent 一起都解释不出来。</p>

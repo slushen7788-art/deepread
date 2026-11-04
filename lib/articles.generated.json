@@ -1,10 +1,32 @@
 [
   {
+    "category": "Agent 工程",
+    "categorySlug": "agent-engineering",
+    "date": "2026-11-04",
+    "excerpt": "长会话 agent 越跑越慢，慢的地方不在模型读多少，而在每轮都要把历史再发一遍。Messages API 本来是无状态的，每轮都是独立请求，客户端只能把全部历史塞进请求体；会话到几十万 token 时，上传、校验、分词这三步发生在模型出第一个 token 之前，历史越长等得越久。消息线程的做法是把会话从请求体里抽出来，存在服务端内存里，首请求发全量建线程，之后每轮只发新增消息和上一条响应的 ID，模型每轮仍读全文，token 用量不变，省的是首 token 之前的等待。",
+    "seoDescription": "Claude 消息线程把会话从请求体里抽出来存在服务端内存：首请求全量建线程，后续只发新增与上一响应 ID；best-effort 语义下客户端自己保管全量副本，过期就重放。",
+    "featured": true,
+    "readingMinutes": 3,
+    "slug": "message-threads",
+    "source": {
+      "outlet": "Claude",
+      "title": "Make long-running agents faster with message threads",
+      "url": "https://claude.com/resources/articles/message-threads"
+    },
+    "tags": [
+      "Claude",
+      "消息线程",
+      "Agent 工程"
+    ],
+    "title": "Claude 消息线程：长会话越跑越慢，慢在每轮都要把历史再发一遍",
+    "seoTitle": "长会话 agent 越跑越慢，慢在哪一步？"
+  },
+  {
     "category": "AI 方法论",
     "categorySlug": "ai-methodology",
     "date": "2026-11-03",
     "excerpt": "Agent 交活越来越多之后，批判性思维卡住的地方是验收。过去审东西的方式是逐行读过，现在产出多到读不过来，判断只能换个地方落：动手之前先定好什么才算验过，拿到结果之后抽查它替你做的决定。",
-    "featured": true,
+    "featured": false,
     "readingMinutes": 5,
     "seoDescription": "批判性思维卡住的地方是验收：事先定义 verified、事后抽查决策清单；但按需重建理解对新人是陷阱，验收工具同源时最后一环由谁来验。",
     "seoTitle": "产出多到读不过来，验收还能靠逐行读吗？",
@@ -130,6 +152,28 @@
     ],
     "title": "别急着拆分 Agent：先证明它真的需要一个子 Agent",
     "seoTitle": "Agent 拆得越多越好吗？先证明每个子 Agent 值得存在"
+  },
+  {
+    "category": "Agent 工程",
+    "categorySlug": "agent-engineering",
+    "date": "2026-10-28",
+    "excerpt": "ub-mode 是一份 agent 写代码的技能，规则只有三句话：先让它跑起来，再把它弄对，最后按规矩收尾。每句话下面挂着一组具体做法，做法下面又挂着三件确定性工具：测复杂度的 crapper、测重复的 dryer、做变异测试的 mutator。",
+    "seoDescription": "ub-mode 只有三句话：先跑起来、再弄对、按规矩收尾。质量不靠提示词许愿，靠三个能算的数：CRAP 小于 10、重复清掉、变异全杀，但门禁只测函数，不测系统。",
+    "featured": true,
+    "readingMinutes": 5,
+    "slug": "ub-mode",
+    "source": {
+      "outlet": "GitHub",
+      "title": "unclebob/ub-mode",
+      "url": "https://github.com/unclebob/ub-mode"
+    },
+    "tags": [
+      "ub-mode",
+      "Agent 工程",
+      "代码质量"
+    ],
+    "title": "ub-mode：把\"写好代码\"从一句许愿变成三道可检查的关",
+    "seoTitle": "Agent 写出来的代码怎么验收？ub-mode 把质量变成三道门禁"
   },
   {
     "category": "Agent 工程",

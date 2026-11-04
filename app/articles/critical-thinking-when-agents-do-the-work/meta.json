@@ -1,1 +1,22 @@
-{"category":"AI 方法论","categorySlug":"ai-methodology","date":"2026-11-03","excerpt":"Agent 交活越来越多之后，批判性思维卡住的地方是验收。过去审东西的方式是逐行读过，现在产出多到读不过来，判断只能换个地方落：动手之前先定好什么才算验过，拿到结果之后抽查它替你做的决定。","featured":true,"readingMinutes":5,"seoDescription":"批判性思维卡住的地方是验收：事先定义 verified、事后抽查决策清单；但按需重建理解对新人是陷阱，验收工具同源时最后一环由谁来验。","seoTitle":"产出多到读不过来，验收还能靠逐行读吗？","slug":"critical-thinking-when-agents-do-the-work","source":{"outlet":"X 文章 · Addy Osmani","title":"Critical thinking when agents do the work","url":"https://x.com/addyosmani/status/2117512471930167377"},"tags":["批判性思维","Agent 验证","代码评审"],"title":"Agent 交活之后，验收从逐行读过，移到了事先定好什么算验过"}
+{
+  "category": "AI 方法论",
+  "categorySlug": "ai-methodology",
+  "date": "2026-11-03",
+  "excerpt": "Agent 交活越来越多之后，批判性思维卡住的地方是验收。过去审东西的方式是逐行读过，现在产出多到读不过来，判断只能换个地方落：动手之前先定好什么才算验过，拿到结果之后抽查它替你做的决定。",
+  "featured": false,
+  "readingMinutes": 5,
+  "seoDescription": "批判性思维卡住的地方是验收：事先定义 verified、事后抽查决策清单；但按需重建理解对新人是陷阱，验收工具同源时最后一环由谁来验。",
+  "seoTitle": "产出多到读不过来，验收还能靠逐行读吗？",
+  "slug": "critical-thinking-when-agents-do-the-work",
+  "source": {
+    "outlet": "X 文章 · Addy Osmani",
+    "title": "Critical thinking when agents do the work",
+    "url": "https://x.com/addyosmani/status/2117512471930167377"
+  },
+  "tags": [
+    "批判性思维",
+    "Agent 验证",
+    "代码评审"
+  ],
+  "title": "Agent 交活之后，验收从逐行读过，移到了事先定好什么算验过"
+}

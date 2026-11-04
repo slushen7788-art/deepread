@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <rect width="1200" height="600" fill="#F1EBDD"/>
+  <text x="600" y="44" text-anchor="middle" font-family="sans-serif" font-size="26" font-weight="bold" fill="#171717">Claude 消息线程：会话从请求体里抽出来，存在服务端内存里</text>
+  <!-- Client -->
+  <rect x="40" y="140" width="200" height="110" rx="10" fill="#171717"/>
+  <text x="140" y="185" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#F1EBDD">客户端</text>
+  <text x="140" y="215" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#C8F12E">留存全量副本</text>
+  <text x="140" y="238" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#F1EBDD">source of truth</text>
+  <!-- arrow create -->
+  <line x1="240" y1="175" x2="300" y2="175" stroke="#171717" stroke-width="3"/>
+  <polygon points="300,175 288,167 288,183" fill="#171717"/>
+  <text x="270" y="160" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555555">首请求</text>
+  <!-- Server memory -->
+  <rect x="300" y="110" width="280" height="180" rx="10" fill="#FFFFFF" stroke="#171717" stroke-width="3"/>
+  <text x="440" y="145" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#171717">服务端内存线程</text>
+  <text x="440" y="175" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#171717">thread create：全量对话</text>
+  <text x="440" y="202" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#171717">+ system + tools</text>
+  <text x="440" y="229" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">加密持有 · 不落盘</text>
+  <text x="440" y="254" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">5 分钟过期 · 1 小时内删除</text>
+  <!-- arrow continue -->
+  <line x1="580" y1="175" x2="640" y2="175" stroke="#171717" stroke-width="3"/>
+  <polygon points="640,175 628,167 628,183" fill="#171717"/>
+  <text x="610" y="160" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#555555">续线程</text>
+  <!-- Model -->
+  <rect x="640" y="110" width="280" height="180" rx="10" fill="#171717"/>
+  <text x="780" y="145" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#F1EBDD">模型</text>
+  <text x="780" y="175" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#F1EBDD">每轮仍读全文</text>
+  <text x="780" y="202" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#F1EBDD">token 用量不变</text>
+  <text x="780" y="229" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#C8F12E">省的是首 token 前的等待</text>
+  <text x="780" y="254" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#F1EBDD">上传 · 校验 · 分词只覆盖新增</text>
+  <!-- arrow back -->
+  <line x1="920" y1="205" x2="980" y2="205" stroke="#171717" stroke-width="3"/>
+  <polygon points="980,205 968,197 968,213" fill="#171717"/>
+  <!-- Response id chain -->
+  <rect x="980" y="110" width="180" height="180" rx="10" fill="#8CCFEA"/>
+  <text x="1070" y="145" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="bold" fill="#171717">响应 ID 链</text>
+  <text x="1070" y="175" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#171717">每轮用新 ID 续下一轮</text>
+  <text x="1070" y="202" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#171717">每个 ID 只能续一次</text>
+  <text x="1070" y="229" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#171717">只能追加，不能改写</text>
+  <text x="1070" y="254" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#171717">404 → 全量重放建新线程</text>
+  <!-- bottom left: field rules -->
+  <rect x="40" y="330" width="540" height="220" rx="10" fill="#FFFFFF" stroke="#171717" stroke-width="2"/>
+  <text x="70" y="365" font-family="sans-serif" font-size="19" font-weight="bold" fill="#171717">每轮发什么，三组规矩</text>
+  <text x="70" y="398" font-family="sans-serif" font-size="16" fill="#333333">建线程时才能发：system、tools，续线程发了就 400；</text>
+  <text x="70" y="426" font-family="sans-serif" font-size="16" fill="#333333">固定字段：model、thinking、tools 相关、cache_control 等，</text>
+  <text x="70" y="454" font-family="sans-serif" font-size="16" fill="#333333">变了就 400 thread_fingerprint_mismatch，报错点名变了哪项；</text>
+  <text x="70" y="482" font-family="sans-serif" font-size="16" fill="#333333">可变字段：max_tokens、stop_sequences、stream 等每轮可变；</text>
+  <text x="70" y="510" font-family="sans-serif" font-size="16" fill="#333333">想改固定字段，重发全量开新线程。</text>
+  <!-- bottom right: caching -->
+  <rect x="620" y="330" width="540" height="220" rx="10" fill="#FFFFFF" stroke="#171717" stroke-width="2"/>
+  <text x="650" y="365" font-family="sans-serif" font-size="19" font-weight="bold" fill="#171717">线程与提示词缓存，正交</text>
+  <text x="650" y="398" font-family="sans-serif" font-size="16" fill="#333333">线程省上传、校验、分词；缓存省模型侧重算；</text>
+  <text x="650" y="426" font-family="sans-serif" font-size="16" fill="#333333">线程不替你缓存，想每轮读缓存，顶层 cache_control 每轮发；</text>
+  <text x="650" y="454" font-family="sans-serif" font-size="16" fill="#333333">断点上限 4 个，顶层算一个，建线程时 system、tools 上的</text>
+  <text x="650" y="482" font-family="sans-serif" font-size="16" fill="#333333">断点每轮重复计，超了就 400；</text>
+  <text x="650" y="510" font-family="sans-serif" font-size="16" fill="#333333">只开线程不设断点，每轮仍重算。</text>
+</svg>
