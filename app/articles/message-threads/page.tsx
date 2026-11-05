@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ArticleShell meta={meta} prev={{ slug: "critical-thinking-when-agents-do-the-work", title: "Agent 交活之后，验收从逐行读过，移到了事先定好什么算验过" }}>
+    <ArticleShell meta={meta} prev={{ slug: "critical-thinking-when-agents-do-the-work", title: "Agent 交活之后，验收从逐行读过，移到了事先定好什么算验过" }} next={{ slug: "context-engineering-four-layers", title: "Context Engineering：生产级 Agent 的上下文管理，不应该只依赖压缩" }}>
       <div>
         <p>长会话 agent 越跑越慢，慢的地方不在模型读多少，而在每轮都要把历史再发一遍。Messages API 本来是无状态的，每轮都是独立请求，客户端只能把全部历史塞进请求体；会话到几十万 token 时，上传、校验、分词这三步发生在模型出第一个 token 之前，历史越长等得越久。消息线程的做法是把会话从请求体里抽出来，存在服务端内存里，首请求发全量建线程，之后每轮只发新增消息和上一条响应的 ID，模型每轮仍读全文，token 用量不变，省的是首 token 之前的等待。</p>
         <p>用法就一个 thread 参数加一个 beta 头。首请求照常发全量对话、system、tools，再加 thread create，API 把对话连同回复存在响应 ID 下面。后续每轮只发上轮之后的新消息，加 thread continue 和上一条 ID，system 和 tools 不再发，线程沿用建线程时的值，每轮用新响应的 ID 续下一轮。SDK 有 helper 包了这些事，自动加 beta 头、续线程、续不上时重放一次；手动写请求也一样，就是这两个字段，beta 头是 message-threads-2026-08-12。</p>

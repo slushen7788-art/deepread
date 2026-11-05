@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520">
+  <rect width="1200" height="520" fill="#F1EBDD"/>
+  <text x="600" y="44" text-anchor="middle" font-family="sans-serif" font-size="26" font-weight="bold" fill="#171717">四层上下文工程：信息生命周期的四个问题</text>
+  <!-- Layer 1 -->
+  <rect x="120" y="80" width="960" height="72" rx="10" fill="#171717"/>
+  <text x="150" y="112" font-family="sans-serif" font-size="20" font-weight="bold" fill="#F1EBDD">架构层</text>
+  <text x="150" y="140" font-family="sans-serif" font-size="16" fill="#C8F12E">谁应该看到这些信息？</text>
+  <text x="1080" y="126" text-anchor="end" font-family="sans-serif" font-size="17" fill="#F1EBDD">控制对象：信息的归属</text>
+  <line x1="600" y1="152" x2="600" y2="172" stroke="#171717" stroke-width="3"/>
+  <polygon points="600,172 592,162 608,162" fill="#171717"/>
+  <!-- Layer 2 -->
+  <rect x="120" y="172" width="960" height="72" rx="10" fill="#FFFFFF" stroke="#171717" stroke-width="3"/>
+  <text x="150" y="204" font-family="sans-serif" font-size="20" font-weight="bold" fill="#171717">Prompt 层</text>
+  <text x="150" y="232" font-family="sans-serif" font-size="16" fill="#555555">应该传递多少信息？</text>
+  <text x="1080" y="218" text-anchor="end" font-family="sans-serif" font-size="17" fill="#171717">控制对象：信息的表达</text>
+  <line x1="600" y1="244" x2="600" y2="264" stroke="#171717" stroke-width="3"/>
+  <polygon points="600,264 592,254 608,254" fill="#171717"/>
+  <!-- Layer 3 -->
+  <rect x="120" y="264" width="960" height="72" rx="10" fill="#8CCFEA"/>
+  <text x="150" y="296" font-family="sans-serif" font-size="20" font-weight="bold" fill="#171717">工具层</text>
+  <text x="150" y="324" font-family="sans-serif" font-size="16" fill="#333333">信息应该存在哪里？</text>
+  <text x="1080" y="310" text-anchor="end" font-family="sans-serif" font-size="17" fill="#171717">控制对象：信息的存储与加载</text>
+  <line x1="600" y1="336" x2="600" y2="356" stroke="#171717" stroke-width="3"/>
+  <polygon points="600,356 592,346 608,346" fill="#171717"/>
+  <!-- Layer 4 -->
+  <rect x="120" y="356" width="960" height="72" rx="10" fill="#FFFFFF" stroke="#171717" stroke-width="3"/>
+  <text x="150" y="388" font-family="sans-serif" font-size="20" font-weight="bold" fill="#171717">验证层</text>
+  <text x="150" y="416" font-family="sans-serif" font-size="16" fill="#555555">信息是否可信？</text>
+  <text x="1080" y="402" text-anchor="end" font-family="sans-serif" font-size="17" fill="#171717">控制对象：信息的质量</text>
+  <!-- fallback -->
+  <rect x="120" y="452" width="960" height="44" rx="10" fill="#F18468"/>
+  <text x="600" y="480" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#171717">兜底：上下文压缩（摘要）与 Prompt Caching，处理仍然不可避免的历史信息</text>
+</svg>

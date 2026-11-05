@@ -2,10 +2,32 @@
   {
     "category": "Agent 工程",
     "categorySlug": "agent-engineering",
+    "date": "2026-11-05",
+    "excerpt": "设计 Agent 时，我们经常会遇到一个问题：任务越复杂，Agent 的上下文就越容易膨胀。一个看似普通的数据分析和报告生成任务，在大约 15 分钟的执行过程中，就可能消耗超过 150K Tokens。但这里还有一个比上下文溢出更值得关注的问题：上下文并不是越完整，Agent 就越容易完成任务。AWS 在 Deep Insight 的实践中把上下文管理组织成四个层次：架构隔离、Prompt 控制、工具外置和独立验证。",
+    "seoDescription": "Deep Insight 的四层上下文工程：架构隔离、Prompt 控制、工具外置、独立验证，信息生命周期管理而不是只靠压缩。",
+    "featured": true,
+    "readingMinutes": 21,
+    "slug": "context-engineering-four-layers",
+    "source": {
+      "outlet": "AWS",
+      "title": "Four layers of context engineering for production AI agents",
+      "url": "https://aws.amazon.com/cn/blogs/machine-learning/four-layers-of-context-engineering-for-production-ai-agents-how-deep-insight-applies-them-in-working-code/"
+    },
+    "tags": [
+      "Context Engineering",
+      "Deep Insight",
+      "Agent 工程"
+    ],
+    "title": "Context Engineering：生产级 Agent 的上下文管理，不应该只依赖压缩",
+    "seoTitle": "生产级 Agent 的上下文管理，为什么不能只靠压缩？"
+  },
+  {
+    "category": "Agent 工程",
+    "categorySlug": "agent-engineering",
     "date": "2026-11-04",
     "excerpt": "长会话 agent 越跑越慢，慢的地方不在模型读多少，而在每轮都要把历史再发一遍。Messages API 本来是无状态的，每轮都是独立请求，客户端只能把全部历史塞进请求体；会话到几十万 token 时，上传、校验、分词这三步发生在模型出第一个 token 之前，历史越长等得越久。消息线程的做法是把会话从请求体里抽出来，存在服务端内存里，首请求发全量建线程，之后每轮只发新增消息和上一条响应的 ID，模型每轮仍读全文，token 用量不变，省的是首 token 之前的等待。",
     "seoDescription": "Claude 消息线程把会话从请求体里抽出来存在服务端内存：首请求全量建线程，后续只发新增与上一响应 ID；best-effort 语义下客户端自己保管全量副本，过期就重放。",
-    "featured": true,
+    "featured": false,
     "readingMinutes": 3,
     "slug": "message-threads",
     "source": {
@@ -152,28 +174,6 @@
     ],
     "title": "别急着拆分 Agent：先证明它真的需要一个子 Agent",
     "seoTitle": "Agent 拆得越多越好吗？先证明每个子 Agent 值得存在"
-  },
-  {
-    "category": "Agent 工程",
-    "categorySlug": "agent-engineering",
-    "date": "2026-10-28",
-    "excerpt": "ub-mode 是一份 agent 写代码的技能，规则只有三句话：先让它跑起来，再把它弄对，最后按规矩收尾。每句话下面挂着一组具体做法，做法下面又挂着三件确定性工具：测复杂度的 crapper、测重复的 dryer、做变异测试的 mutator。",
-    "seoDescription": "ub-mode 只有三句话：先跑起来、再弄对、按规矩收尾。质量不靠提示词许愿，靠三个能算的数：CRAP 小于 10、重复清掉、变异全杀，但门禁只测函数，不测系统。",
-    "featured": true,
-    "readingMinutes": 5,
-    "slug": "ub-mode",
-    "source": {
-      "outlet": "GitHub",
-      "title": "unclebob/ub-mode",
-      "url": "https://github.com/unclebob/ub-mode"
-    },
-    "tags": [
-      "ub-mode",
-      "Agent 工程",
-      "代码质量"
-    ],
-    "title": "ub-mode：把\"写好代码\"从一句许愿变成三道可检查的关",
-    "seoTitle": "Agent 写出来的代码怎么验收？ub-mode 把质量变成三道门禁"
   },
   {
     "category": "Agent 工程",

@@ -4,7 +4,7 @@
   "date": "2026-11-04",
   "excerpt": "长会话 agent 越跑越慢，慢的地方不在模型读多少，而在每轮都要把历史再发一遍。Messages API 本来是无状态的，每轮都是独立请求，客户端只能把全部历史塞进请求体；会话到几十万 token 时，上传、校验、分词这三步发生在模型出第一个 token 之前，历史越长等得越久。消息线程的做法是把会话从请求体里抽出来，存在服务端内存里，首请求发全量建线程，之后每轮只发新增消息和上一条响应的 ID，模型每轮仍读全文，token 用量不变，省的是首 token 之前的等待。",
   "seoDescription": "Claude 消息线程把会话从请求体里抽出来存在服务端内存：首请求全量建线程，后续只发新增与上一响应 ID；best-effort 语义下客户端自己保管全量副本，过期就重放。",
-  "featured": true,
+  "featured": false,
   "readingMinutes": 3,
   "slug": "message-threads",
   "source": {

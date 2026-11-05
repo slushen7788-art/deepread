@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480">
+  <rect width="1200" height="480" fill="#F1EBDD"/>
+  <text x="600" y="44" text-anchor="middle" font-family="sans-serif" font-size="26" font-weight="bold" fill="#171717">验证链：信任从回答，变成可追溯的证据</text>
+  <!-- Step 1 -->
+  <rect x="30" y="120" width="200" height="120" rx="10" fill="#171717"/>
+  <text x="130" y="165" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#F1EBDD">Coder 计算</text>
+  <text x="130" y="195" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#C8F12E">记录公式 · 数据源</text>
+  <text x="130" y="218" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#F1EBDD">字段 · 重要性等级</text>
+  <line x1="230" y1="180" x2="280" y2="180" stroke="#171717" stroke-width="3"/>
+  <polygon points="280,180 268,172 268,188" fill="#171717"/>
+  <!-- Step 2 -->
+  <rect x="280" y="120" width="220" height="120" rx="10" fill="#FFFFFF" stroke="#171717" stroke-width="3"/>
+  <text x="390" y="160" text-anchor="middle" font-family="sans-serif" font-size="17" fill="#171717">calculation_metadata.json</text>
+  <text x="390" y="190" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">计算结果与标识</text>
+  <text x="390" y="215" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">原始数据文件 · 数据列</text>
+  <line x1="500" y1="180" x2="550" y2="180" stroke="#171717" stroke-width="3"/>
+  <polygon points="550,180 538,172 538,188" fill="#171717"/>
+  <!-- Step 3 -->
+  <rect x="550" y="120" width="200" height="120" rx="10" fill="#8CCFEA"/>
+  <text x="650" y="165" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="bold" fill="#171717">Validator 重算</text>
+  <text x="650" y="195" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#171717">对照原始数据比对</text>
+  <text x="650" y="218" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#171717">绝对误差小于 0.01</text>
+  <line x1="750" y1="180" x2="800" y2="180" stroke="#171717" stroke-width="3"/>
+  <polygon points="800,180 788,172 788,188" fill="#171717"/>
+  <!-- Step 4 -->
+  <rect x="800" y="120" width="180" height="120" rx="10" fill="#FFFFFF" stroke="#171717" stroke-width="3"/>
+  <text x="890" y="165" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="bold" fill="#171717">citations.json</text>
+  <text x="890" y="195" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">通过验证的引用</text>
+  <text x="890" y="218" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">供报告引用</text>
+  <line x1="980" y1="180" x2="1030" y2="180" stroke="#171717" stroke-width="3"/>
+  <polygon points="1030,180 1018,172 1018,188" fill="#171717"/>
+  <!-- Step 5 -->
+  <rect x="1030" y="120" width="140" height="120" rx="10" fill="#171717"/>
+  <text x="1100" y="165" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#F1EBDD">Reporter</text>
+  <text x="1100" y="195" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#F1EBDD">生成 DOCX</text>
+  <!-- Auditor row -->
+  <line x1="1100" y1="240" x2="1100" y2="290" stroke="#F18468" stroke-width="3"/>
+  <polygon points="1100,290 1092,280 1108,280" fill="#F18468"/>
+  <rect x="900" y="290" width="270" height="90" rx="10" fill="#F18468"/>
+  <text x="1035" y="330" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="bold" fill="#171717">Auditor 审计最终产物</text>
+  <text x="1035" y="360" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#171717">对照 citations 与计算元数据检查报告</text>
+  <line x1="900" y1="335" x2="830" y2="335" stroke="#F18468" stroke-width="3"/>
+  <polygon points="830,335 842,327 842,343" fill="#F18468"/>
+  <rect x="560" y="290" width="270" height="90" rx="10" fill="#FFFFFF" stroke="#171717" stroke-width="3"/>
+  <text x="695" y="330" text-anchor="middle" font-family="sans-serif" font-size="19" font-weight="bold" fill="#171717">audit_findings.json</text>
+  <text x="695" y="360" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#555555">问题记录，不改原始验证数据</text>
+  <line x1="560" y1="335" x2="490" y2="335" stroke="#F18468" stroke-width="3"/>
+  <polygon points="490,335 502,327 502,343" fill="#F18468"/>
+  <rect x="290" y="290" width="200" height="90" rx="10" fill="#171717"/>
+  <text x="390" y="330" text-anchor="middle" font-family="sans-serif" font-size="19" fill="#F1EBDD">Reporter 定向修复</text>
+  <text x="390" y="360" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#C8F12E">最多两次修复重试</text>
+  <!-- note -->
+  <text x="600" y="440" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#555555">三种质量责任分开：Coder 对结果负责，Validator 对计算依据负责，Auditor 对最终产物负责</text>
+</svg>
