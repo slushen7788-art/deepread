@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <ArticleShell meta={meta} prev={{ slug: "message-threads", title: "Claude 消息线程：长会话越跑越慢，慢在每轮都要把历史再发一遍" }}>
+    <ArticleShell meta={meta} prev={{ slug: "message-threads", title: "Claude 消息线程：长会话越跑越慢，慢在每轮都要把历史再发一遍" }} next={{ slug: "components-of-agent-memory", title: "Agent 记忆：写的时候在预测未来，整理要放到离线做" }}>
       <div>
         <p>从 AWS Deep Insight 看多 Agent 隔离、文件系统通信、动态 Skill 加载与独立验证</p>
         <p>原文：<a href="https://aws.amazon.com/cn/blogs/machine-learning/four-layers-of-context-engineering-for-production-ai-agents-how-deep-insight-applies-them-in-working-code/?utm_source=chatgpt.com">Four layers of context engineering for production AI agents</a></p>

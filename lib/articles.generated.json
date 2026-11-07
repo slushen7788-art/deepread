@@ -2,10 +2,32 @@
   {
     "category": "Agent 工程",
     "categorySlug": "agent-engineering",
+    "date": "2026-11-07",
+    "excerpt": "Agent 记忆真正难的地方，在写的那一刻要猜未来需要什么，猜错了会被以后的会话当成事实读回去。Anthropic 把记忆的活拆成两半，会话内只管写，离线再管整理、纠错和分层，dreaming 就是第二半的名字。",
+    "seoDescription": "Agent 记忆写时预测、离线 dreaming 纠错、wiki 建结构、分层注入与按目标组织：记忆从执行时的副产品变成执行后的一道工序。",
+    "featured": true,
+    "readingMinutes": 4,
+    "slug": "components-of-agent-memory",
+    "source": {
+      "outlet": "Anthropic",
+      "title": "The components of agent memory",
+      "url": "https://www.anthropic.com/research/components-of-agent-memory"
+    },
+    "tags": [
+      "Anthropic",
+      "Agent 记忆",
+      "Agent 工程"
+    ],
+    "title": "Agent 记忆：写的时候在预测未来，整理要放到离线做",
+    "seoTitle": "Agent 记忆为什么写的时候就要预测未来？"
+  },
+  {
+    "category": "Agent 工程",
+    "categorySlug": "agent-engineering",
     "date": "2026-11-05",
     "excerpt": "设计 Agent 时，我们经常会遇到一个问题：任务越复杂，Agent 的上下文就越容易膨胀。一个看似普通的数据分析和报告生成任务，在大约 15 分钟的执行过程中，就可能消耗超过 150K Tokens。但这里还有一个比上下文溢出更值得关注的问题：上下文并不是越完整，Agent 就越容易完成任务。AWS 在 Deep Insight 的实践中把上下文管理组织成四个层次：架构隔离、Prompt 控制、工具外置和独立验证。",
     "seoDescription": "Deep Insight 的四层上下文工程：架构隔离、Prompt 控制、工具外置、独立验证，信息生命周期管理而不是只靠压缩。",
-    "featured": true,
+    "featured": false,
     "readingMinutes": 21,
     "slug": "context-engineering-four-layers",
     "source": {

@@ -1,0 +1,22 @@
+{
+  "category": "Agent 工程",
+  "categorySlug": "agent-engineering",
+  "date": "2026-11-07",
+  "excerpt": "Agent 记忆真正难的地方，在写的那一刻要猜未来需要什么，猜错了会被以后的会话当成事实读回去。Anthropic 把记忆的活拆成两半，会话内只管写，离线再管整理、纠错和分层，dreaming 就是第二半的名字。",
+  "seoDescription": "Agent 记忆写时预测、离线 dreaming 纠错、wiki 建结构、分层注入与按目标组织：记忆从执行时的副产品变成执行后的一道工序。",
+  "featured": true,
+  "readingMinutes": 4,
+  "slug": "components-of-agent-memory",
+  "source": {
+    "outlet": "Anthropic",
+    "title": "The components of agent memory",
+    "url": "https://www.anthropic.com/research/components-of-agent-memory"
+  },
+  "tags": [
+    "Anthropic",
+    "Agent 记忆",
+    "Agent 工程"
+  ],
+  "title": "Agent 记忆：写的时候在预测未来，整理要放到离线做",
+  "seoTitle": "Agent 记忆为什么写的时候就要预测未来？"
+}
